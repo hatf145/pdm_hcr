@@ -7,20 +7,22 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:padding="@dimen/container_wide_padding"
-    tools:context="iteso.com.rentstudio.Activity_Register_User">
+    tools:context="iteso.com.rentstudio.Activity_Register_Lessor">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="vertical">
+
         <LinearLayout
+            android:id="@+id/activity_register_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="@dimen/margin">
             <ImageView
-                android:id="@+id/activity_registerUser_icon"
+                android:id="@+id/activity_register_icon"
                 android:layout_width="@dimen/icon_size"
                 android:layout_height="@dimen/icon_size"
                 android:scaleType="centerInside"
@@ -31,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:text="@string/register"
+                android:text="@string/lessor_registry"
                 android:textStyle="bold"
                 android:textColor="@color/trueBlack"
                 android:textSize="@dimen/large_textSize"
@@ -44,11 +46,10 @@
             android:layout_margin="@dimen/margin">
 
             <EditText
-                android:id="@+id/activity_registerUser_name"
+                android:id="@+id/activity_registerLessor_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/name"
-                android:inputType="textPersonName"/>
+                android:hint="@string/name"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -58,11 +59,10 @@
             android:layout_margin="@dimen/margin">
 
             <EditText
-                android:id="@+id/activity_registerUser_lastname"
+                android:id="@+id/activity_registerLessor_lastname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/lastname"
-                android:inputType="textPersonName"/>
+                android:hint="@string/lastname"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -72,7 +72,7 @@
             android:layout_margin="@dimen/margin">
 
             <EditText
-                android:id="@+id/activity_registerUser_email"
+                android:id="@+id/activity_registerLessor_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/email"
@@ -86,31 +86,25 @@
             android:layout_margin="@dimen/margin">
 
             <EditText
-                android:id="@+id/activity_registerUser_cellphone"
+                android:id="@+id/activity_registerLessor_cellphone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/phone"
                 android:inputType="phone"/>
+
         </android.support.design.widget.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_height="wrap_content"
+        <Spinner
+            android:id="@+id/activity_registerLessor_property"
             android:layout_width="match_parent"
-            android:layout_margin="@dimen/margin">
-
-            <EditText
-                android:id="@+id/activity_registerUser_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/password"
-                android:inputType="textPassword"/>
-
-        </android.support.design.widget.TextInputLayout>
-
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:entries="@array/properties"
+            />
     </LinearLayout>
 
     <Button
-        android:id="@+id/activity_loginUser_Button"
+        android:id="@+id/activity_login_loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/sign_in"

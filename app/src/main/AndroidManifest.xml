@@ -17,7 +17,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity_Register_User">
-
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity_LogIn" />
+        </activity>
+        <activity android:name=".Activity_Register_Lessor">
         </activity>
     </application>
 

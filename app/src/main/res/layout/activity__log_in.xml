@@ -25,21 +25,36 @@
         android:layout_weight="2"
         android:orientation="vertical"
         android:gravity="center_vertical">
-        <EditText
-            android:id="@+id/activity_login_username"
-            android:layout_width="match_parent"
+
+        <android.support.design.widget.TextInputLayout
             android:layout_height="wrap_content"
-            android:hint="@string/user"
-            android:layout_margin="@dimen/margin"
-            android:layout_gravity="center_horizontal"/>
-        <EditText
-            android:id="@+id/activity_login_password"
             android:layout_width="match_parent"
+            android:layout_margin="@dimen/margin">
+            <EditText
+                android:id="@+id/activity_login_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/user"
+                android:layout_gravity="center_horizontal"
+                android:inputType="textPersonName"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
             android:layout_height="wrap_content"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            android:layout_margin="@dimen/margin"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/margin">
+
+            <EditText
+                android:id="@+id/activity_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:layout_margin="@dimen/margin"
+                android:layout_gravity="center_horizontal"/>
+
+        </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
         <Button
@@ -51,7 +66,7 @@
             android:textAllCaps="false"
             android:textColor="@color/notReallyWhite"
             android:textSize="@dimen/large_button_textSize"
-            android:background="@drawable/purple_button"
+            android:background="@drawable/button_ripple_effect"
             android:paddingHorizontal="@dimen/node_padding"
             android:layout_margin="@dimen/margin"
             android:layout_gravity="center_horizontal"/>
@@ -64,7 +79,7 @@
             android:textAllCaps="false"
             android:textColor="@color/notReallyWhite"
             android:textSize="@dimen/regular_button_textSize"
-            android:background="@drawable/purple_button"
+            android:background="@drawable/button_ripple_effect"
             android:paddingHorizontal="@dimen/node_padding"
             android:layout_margin="@dimen/margin"
             android:layout_gravity="center_horizontal"
