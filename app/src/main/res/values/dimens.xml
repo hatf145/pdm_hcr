@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--Margen entre nodos.-->
     <dimen name="margin">5sp</dimen>
+    <!--Padding ancho para contenedor.-->
     <dimen name="container_wide_padding">35sp</dimen>
+    <!--Padding para nodos nodos.-->
     <dimen name="node_padding">15sp</dimen>
+    <!--Radio de las esquinas de un boton.-->
     <dimen name="button_radius">5sp</dimen>
+    <!--Tamaño de texto pata botones grandes.-->
     <dimen name="large_button_textSize">19sp</dimen>
+    <!--Tamaño de texto pata botones regulares.-->
     <dimen name="regular_button_textSize">15sp</dimen>
 </resources>

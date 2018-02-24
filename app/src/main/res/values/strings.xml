@@ -1,4 +1,5 @@
 <resources>
+    <!--Nombrar los Strings por su traducción al inglés-->
     <string name="app_name">RentStudio</string>
     <string name="log_in">Iniciar Sesión</string>
     <string name="register">Registrarse</string>
