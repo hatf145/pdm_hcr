@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingHorizontal="@dimen/container_wide_padding"
+    android:padding="@dimen/container_wide_padding"
     android:paddingTop="@dimen/container_wide_padding"
     tools:context="iteso.com.rentstudio.Activity_LogIn">
 
@@ -22,7 +22,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
+        android:layout_weight="2"
         android:orientation="vertical"
         android:gravity="center_vertical">
         <EditText
@@ -40,13 +40,14 @@
             android:inputType="textPassword"
             android:layout_margin="@dimen/margin"
             android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
         <Button
             android:id="@+id/activity_login_loginButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/log_in"
             android:textStyle="bold"
-            android:fontFamily="sans-serif"
             android:textAllCaps="false"
             android:textColor="@color/notReallyWhite"
             android:textSize="@dimen/large_button_textSize"
@@ -58,9 +59,8 @@
             android:id="@+id/activity_login_registerButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/register"
+            android:text="@string/sign_up"
             android:textStyle="bold"
-            android:fontFamily="sans-serif"
             android:textAllCaps="false"
             android:textColor="@color/notReallyWhite"
             android:textSize="@dimen/regular_button_textSize"
@@ -69,6 +69,6 @@
             android:layout_margin="@dimen/margin"
             android:layout_gravity="center_horizontal"/>
 
-    </LinearLayout>
+
 
 </LinearLayout>
