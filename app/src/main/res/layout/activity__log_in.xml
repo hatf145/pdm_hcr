@@ -67,7 +67,8 @@
             android:background="@drawable/purple_button"
             android:paddingHorizontal="@dimen/node_padding"
             android:layout_margin="@dimen/margin"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center_horizontal"
+            android:onClick="onClick"/>
 
 
 
