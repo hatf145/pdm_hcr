@@ -16,4 +16,9 @@
     <dimen name="large_textSize">22sp</dimen>
     <!--Tamaño de iconos en la UI-->
     <dimen name="icon_size">50sp</dimen>
+    <!--Tamaño de RentStudio-->
+    <dimen name="title_size">60sp</dimen>
+    <dimen name="margin_top">20sp</dimen>
+
+
 </resources>
