@@ -26,6 +26,11 @@ public class Activity_LogIn extends AppCompatActivity {
                 Intent registerIntent = new Intent(Activity_LogIn.this,
                     Activity_Register_User.class);
                 startActivity(registerIntent);
+                break;
+            case R.id.activity_login_loginButton:
+                Intent loginIntent = new Intent(Activity_LogIn.this,
+                        Activity_Main_Screen.class);
+                startActivity(loginIntent);
         }
     }
 

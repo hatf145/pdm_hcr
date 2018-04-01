@@ -7,7 +7,6 @@ import android.widget.Spinner;
 
 public class Activity_Register_Lessor extends AppCompatActivity {
     EditText etName, etLastname, etEmail, etPhone;
-    Spinner sProperty;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +17,6 @@ public class Activity_Register_Lessor extends AppCompatActivity {
         etLastname = findViewById(R.id.activity_registerLessor_lastname);
         etEmail = findViewById(R.id.activity_registerLessor_email);
         etPhone = findViewById(R.id.activity_registerLessor_cellphone);
-        sProperty = findViewById(R.id.activity_registerLessor_property);
     }
 
     @Override

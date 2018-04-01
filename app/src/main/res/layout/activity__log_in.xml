@@ -69,7 +69,8 @@
             android:background="@drawable/button_ripple_effect"
             android:paddingHorizontal="@dimen/node_padding"
             android:layout_margin="@dimen/margin"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center_horizontal"
+            android:onClick="onClick"/>
         <Button
             android:id="@+id/activity_login_registerButton"
             android:layout_width="wrap_content"

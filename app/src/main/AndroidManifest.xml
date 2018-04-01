@@ -21,8 +21,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Activity_LogIn" />
         </activity>
-        <activity android:name=".Activity_Register_Lessor">
-        </activity>
+        <activity android:name=".Activity_Register_Lessor" />
+        <activity android:name=".Activity_Main_Screen"/>
     </application>
 
 </manifest>
