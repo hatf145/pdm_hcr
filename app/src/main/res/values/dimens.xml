@@ -19,6 +19,7 @@
     <!--Tamaño de RentStudio-->
     <dimen name="title_size">60sp</dimen>
     <dimen name="margin_top">20sp</dimen>
+    <dimen name="large_text_button">20sp</dimen>
 
 
 </resources>

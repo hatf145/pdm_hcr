@@ -26,9 +26,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity_Register_Property" />
-        <activity android:name=".Activity_Rent">
-
-        </activity>
+        <activity android:name=".Activity_Rent"></activity>
+        <activity android:name=".Activity_Payment_Method"></activity>
     </application>
 
 </manifest>

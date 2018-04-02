@@ -21,7 +21,8 @@
     <string name="available">Disponible</string>
     <string name="navailable">No disponible</string>
     <string name="register_rent">Registrar Renta</string>
-
+    <string name="payment_paypal">Paypal</string>
+    <string name="payment_card">Credit or Debit card</string>
 
 
     <string-array name="properties">
