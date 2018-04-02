@@ -22,7 +22,13 @@
     <string name="navailable">No disponible</string>
     <string name="register_rent">Registrar Renta</string>
     <string name="payment_paypal">Paypal</string>
-    <string name="payment_card">Credit or Debit card</string>
+    <string name="payment_card">Tarjeta de débito o crédito</string>
+    <string name="card_number_title">Numero de tarjeta</string>
+    <string name="card_expiration_title">Fecha de vencimiento</string>
+    <string name="card_cvc_title">CVC</string>
+    <string name="card_number_hint">1111 1111 1111 1111</string>
+    <string name="card_expiration_hint">01/25</string>
+    <string name="card_cvc_hint">123</string>
 
 
     <string-array name="properties">

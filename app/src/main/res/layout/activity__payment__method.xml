@@ -11,12 +11,15 @@
 
   
     <TextView
+        android:id="@+id/card_payment_textview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/payment_card"
         android:textSize="@dimen/large_text_button"
         android:gravity="center"
         android:padding="@dimen/large_text_button"
+        android:clickable="true"
+
         />
 
     <View
@@ -25,12 +28,15 @@
         android:background="#c0c0c0"/>
     
     <TextView
+        android:id="@+id/paypal_payment_textview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/payment_paypal"
         android:gravity="center"
         android:textSize="@dimen/large_text_button"
-        android:padding="@dimen/large_text_button"/>
+        android:padding="@dimen/large_text_button"
+        android:clickable="true"
+        />
 
 </LinearLayout>
 
