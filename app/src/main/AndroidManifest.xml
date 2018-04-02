@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="iteso.com.rentstudio">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -26,8 +27,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity_Register_Property" />
-        <activity android:name=".Activity_Rent"></activity>
-        <activity android:name=".Activity_Payment_Method"></activity>
+        <activity android:name=".Activity_Rent" />
+        <activity android:name=".Activity_Payment_Method"/>
+        <activity android:name=".Activity_paypal" />
+        <activity android:name=".Activity_card_payment"></activity>
     </application>
 
 </manifest>
