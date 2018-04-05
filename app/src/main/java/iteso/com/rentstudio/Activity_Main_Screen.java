@@ -24,7 +24,7 @@ public class Activity_Main_Screen extends AppCompatActivity {
     public Fragment_Main fragment_main;
     public Fragment_Lessors fragment_lessors;
     public Fragment_Properties fragment_properties;
-    TextView mEditProfile, mSettings;
+    TextView mEditProfile, mSettings, mAddProperty, mAddLessor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,8 @@ public class Activity_Main_Screen extends AppCompatActivity {
 
         mEditProfile = findViewById(R.id.drawer_edit_profile);
         mSettings = findViewById(R.id.drawer_settings);
+        mAddProperty = findViewById(R.id.drawer_add_property);
+        mAddLessor = findViewById(R.id.drawer_add_lessor);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
 
@@ -58,6 +60,22 @@ public class Activity_Main_Screen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Activity_Settings.class);
+                startActivity(intent);
+            }
+        });
+
+        mAddProperty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Activity_Register_Property.class);
+                startActivity(intent);
+            }
+        });
+
+        mAddLessor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Activity_Register_Lessor.class);
                 startActivity(intent);
             }
         });
