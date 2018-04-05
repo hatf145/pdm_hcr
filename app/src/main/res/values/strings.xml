@@ -16,9 +16,7 @@
     <string name="town">Municipio</string>
     <string name="state">Estado</string>
     <string name="lessor_registry">Registro Arrendatario</string>
-<<<<<<< HEAD
     <string name="search">Buscador</string>
-=======
     <string name="name1">Nombre</string>
     <string name="rent">Renta</string>
     <string name="available">Disponible</string>
@@ -32,8 +30,7 @@
     <string name="card_number_hint">1111 1111 1111 1111</string>
     <string name="card_expiration_hint">01/25</string>
     <string name="card_cvc_hint">123</string>
-
->>>>>>> b7eabfe48e50e141829607eaf194f200ce15387a
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string-array name="properties">
         <item>Propiedad</item>
@@ -42,15 +39,9 @@
         <item>Propiedad C</item>
     </string-array>
 
-<<<<<<< HEAD
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-=======
     <string-array name="available">
         <item>Disponible</item>
         <item>No disponible</item>
     </string-array>
 
-
->>>>>>> b7eabfe48e50e141829607eaf194f200ce15387a
 </resources>
