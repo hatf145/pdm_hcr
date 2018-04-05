@@ -6,4 +6,5 @@
     <color name="notReallyWhite">#f6f8ff</color>
     <color name="trueBlack">#000000</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="lightGray">#d8dbe2</color>
 </resources>

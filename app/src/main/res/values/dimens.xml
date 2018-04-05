@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--Margen entre nodos.-->
-    <dimen name="margin">5sp</dimen>
+    <dimen name="margin">6sp</dimen>
     <!--Padding ancho para contenedor.-->
     <dimen name="container_wide_padding">35sp</dimen>
-    <!--Padding para nodos nodos.-->
+    <!--Padding para nodos.-->
     <dimen name="node_padding">15sp</dimen>
     <!--Radio de las esquinas de un boton.-->
     <dimen name="button_radius">5sp</dimen>
@@ -16,10 +16,19 @@
     <dimen name="large_textSize">22sp</dimen>
     <!--Tamaño de iconos en la UI-->
     <dimen name="icon_size">50sp</dimen>
+<<<<<<< HEAD
+    <!--Alto de los CardView en el MainScreen-->
+    <dimen name="card_height">220sp</dimen>
+    <!--Alto de los iconos en el CardView-->
+    <dimen name="icon_height">60sp</dimen>
+    <!--Tamaño del texto para los CardView-->
+    <dimen name="card_view_text_size">25sp</dimen>
+=======
     <!--Tamaño de RentStudio-->
     <dimen name="title_size">60sp</dimen>
     <dimen name="margin_top">20sp</dimen>
     <dimen name="large_text_button">20sp</dimen>
 
 
+>>>>>>> b7eabfe48e50e141829607eaf194f200ce15387a
 </resources>
