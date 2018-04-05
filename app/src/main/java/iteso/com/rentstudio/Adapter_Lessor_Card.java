@@ -9,17 +9,13 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import iteso.com.rentstudio.beans.Rent;
+import iteso.com.rentstudio.beans.Lessor;
 
-/**
- * Created by hecto on 26/02/2018.
- */
-
-public class Adapter_Rent_Card extends RecyclerView.Adapter<Adapter_Rent_Card.ViewHolder>{
-    ArrayList<Rent> mDataSet;
+public class Adapter_Lessor_Card extends RecyclerView.Adapter<Adapter_Lessor_Card.ViewHolder> {
+    ArrayList<Lessor> mDataSet;
     private Context context;
 
-    public Adapter_Rent_Card(Context context, ArrayList<Rent> myDataSet){
+    public Adapter_Lessor_Card(Context context, ArrayList<Lessor> myDataSet) {
         mDataSet = myDataSet;
         this.context = context;
     }
@@ -27,33 +23,33 @@ public class Adapter_Rent_Card extends RecyclerView.Adapter<Adapter_Rent_Card.Vi
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.card_rent, parent, false);
+                .inflate(R.layout.card_lessor, parent, false);
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         //public RelativeLayout mEventLayout;
 
-        public TextView mHouseName;
         public TextView mLessorName;
-        public TextView mDate;
+        public TextView mLessorPhone;
+        public TextView mLessorEmail;
 
-        public ViewHolder(View v){
+        public ViewHolder(View v) {
             super(v);
             //mEventLayout = (RelativeLayout) v.findViewById(R.id.item_product_layout);
 
-            mHouseName = v.findViewById(R.id.rent_card_house_name);
-            mLessorName = v.findViewById(R.id.rent_card_lessor_name);
-            mDate = v.findViewById(R.id.rent_card_date_text);
+            mLessorName = v.findViewById(R.id.lessor_card_name_text);
+            mLessorPhone = v.findViewById(R.id.lessor_card_phone_text);
+            mLessorEmail = v.findViewById(R.id.lessor_card_email_text);
         }
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        holder.mHouseName.setText(mDataSet.get(position).getProperty());
-        holder.mLessorName.setText(mDataSet.get(position).getLessor());
-        holder.mDate.setText(mDataSet.get(position).getCycle().toString());
+        holder.mLessorName.setText(mDataSet.get(position).getName());
+        holder.mLessorPhone.setText(mDataSet.get(position).getPhone());
+        holder.mLessorEmail.setText(mDataSet.get(position).getEmail());
     }
 
     @Override

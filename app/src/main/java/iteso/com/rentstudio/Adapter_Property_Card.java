@@ -9,17 +9,13 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import iteso.com.rentstudio.beans.Rent;
+import iteso.com.rentstudio.beans.Property;
 
-/**
- * Created by hecto on 26/02/2018.
- */
-
-public class Adapter_Rent_Card extends RecyclerView.Adapter<Adapter_Rent_Card.ViewHolder>{
-    ArrayList<Rent> mDataSet;
+public class Adapter_Property_Card extends RecyclerView.Adapter<Adapter_Property_Card.ViewHolder>{
+    ArrayList<Property> mDataSet;
     private Context context;
 
-    public Adapter_Rent_Card(Context context, ArrayList<Rent> myDataSet){
+    public Adapter_Property_Card(Context context, ArrayList<Property> myDataSet){
         mDataSet = myDataSet;
         this.context = context;
     }
@@ -27,7 +23,7 @@ public class Adapter_Rent_Card extends RecyclerView.Adapter<Adapter_Rent_Card.Vi
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.card_rent, parent, false);
+                .inflate(R.layout.card_property, parent, false);
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
@@ -36,24 +32,21 @@ public class Adapter_Rent_Card extends RecyclerView.Adapter<Adapter_Rent_Card.Vi
         //public RelativeLayout mEventLayout;
 
         public TextView mHouseName;
-        public TextView mLessorName;
-        public TextView mDate;
+        public TextView mRent;
 
         public ViewHolder(View v){
             super(v);
             //mEventLayout = (RelativeLayout) v.findViewById(R.id.item_product_layout);
 
-            mHouseName = v.findViewById(R.id.rent_card_house_name);
-            mLessorName = v.findViewById(R.id.rent_card_lessor_name);
-            mDate = v.findViewById(R.id.rent_card_date_text);
+            mHouseName = v.findViewById(R.id.property_card_house_text);
+            mRent = v.findViewById(R.id.property_card_rent_text);
         }
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        holder.mHouseName.setText(mDataSet.get(position).getProperty());
-        holder.mLessorName.setText(mDataSet.get(position).getLessor());
-        holder.mDate.setText(mDataSet.get(position).getCycle().toString());
+        holder.mHouseName.setText(mDataSet.get(position).getAddress());
+        holder.mRent.setText(mDataSet.get(position).getCost());
     }
 
     @Override

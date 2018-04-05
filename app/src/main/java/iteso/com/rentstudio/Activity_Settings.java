@@ -7,16 +7,50 @@ import android.view.View;
 import android.widget.TextView;
 
 public class Activity_Settings extends AppCompatActivity {
-TextView notifications,payment, help, use, logout;
+TextView notifications, eula, logout;
+    TextView mPaymnet, mHelp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity__settings);
         notifications=findViewById(R.id.activity_settings_not);
-        payment=findViewById(R.id.activity_settings_payment);
-        help=findViewById(R.id.activity_settings_help);
-        use=findViewById(R.id.activity_settings_use);
+        eula=findViewById(R.id.activity_settings_eula);
         logout=findViewById(R.id.activity_settings_logout);
+        mPaymnet = findViewById(R.id.activity_settings_payment);
+        mHelp = findViewById(R.id.activity_settings_help);
+
+        notifications.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Activity_Notifications.class);
+                startActivity(intent);
+            }
+        });
+
+        eula.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Activity_Eula.class);
+                startActivity(intent);
+            }
+        });
+
+        mPaymnet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Activity_Payment_Method.class);
+                startActivity(intent);
+            }
+        });
+
+        mHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Activity_help.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
@@ -37,14 +71,16 @@ TextView notifications,payment, help, use, logout;
                         Activity_Payment_Method.class);
                 startActivity(paymentIntent);
                 break;
-            case R.id.activity_settings_use:
+            case R.id.activity_settings_eula:
                 Intent useIntent = new Intent(Activity_Settings.this,
-                        Activity_Payment_Method.class);
+                        Activity_Eula.class);
                 startActivity(useIntent);
                 break;
             case R.id.activity_settings_logout:
                 finish();
                 break;
         }
+
+
     }
 }

@@ -49,6 +49,11 @@
     <string name="save">Guardar</string>
 
 
+    <string name="properties">Propiedades</string>
+    <string name="home">Home</string>
+    <string name="lessors">Arrendadores</string>
+    <string name="edit_profile">Editar Perfil</string>
+    <string name="settings">Ajustes</string>
 
 
     <string-array name="properties">

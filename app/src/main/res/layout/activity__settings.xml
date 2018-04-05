@@ -25,7 +25,6 @@
         android:background="#c0c0c0"/>
 
     <TextView
-
         android:id="@+id/activity_settings_payment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,7 +41,6 @@
         android:background="#c0c0c0"/>
 
     <TextView
-
         android:id="@+id/activity_settings_help"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -61,7 +59,7 @@
 
     <TextView
 
-        android:id="@+id/activity_settings_use"
+        android:id="@+id/activity_settings_eula"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clickable="true"
