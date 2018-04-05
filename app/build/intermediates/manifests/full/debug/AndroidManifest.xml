@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="iteso.com.rentstudio"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="23"
+        android:targetSdkVersion="26" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="iteso.com.rentstudio.Activity_LogIn" />
+        <activity android:name="iteso.com.rentstudio.Activity_Register_User" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity_LogIn" />
+        </activity>
+        <activity android:name="iteso.com.rentstudio.Activity_Register_Lessor" />
+        <activity
+            android:name="iteso.com.rentstudio.Activity_Main_Screen"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="iteso.com.rentstudio.Activity_Start"
+            android:theme="@style/noAction" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="iteso.com.rentstudio.Activity_Register_Property" />
+        <activity android:name="iteso.com.rentstudio.Activity_Rent" />
+        <activity android:name="iteso.com.rentstudio.Activity_Payment_Method" />
+        <activity android:name="iteso.com.rentstudio.Activity_paypal" />
+        <activity android:name="iteso.com.rentstudio.Activity_card_payment" />
+        <activity android:name="iteso.com.rentstudio.Activity_help" />
+        <activity android:name="iteso.com.rentstudio.Activity_Settings" />
+        <activity android:name="iteso.com.rentstudio.Activity_Notifications" />
+        <activity android:name="iteso.com.rentstudio.Activity_Edit_User" />
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
+    </application>
+
+</manifest>

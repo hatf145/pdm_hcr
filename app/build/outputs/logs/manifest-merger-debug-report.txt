@@ -1,0 +1,246 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:2:1-45:12
+MERGED from [com.android.support:design:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\5cdd161ce098be17a13319525a6cb771\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\fb99670ed3c25af2c7208ec4566519b3\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\7c30a5a7ec94d31c9f1360811361a18c\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\0dbd345ff9cc36cdd6dd91c74d129710\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\7345e97cf59dd0b5c2e4bd4a6a9b6db8\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:transition:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\66103c6911344b02761b3398b2fb091f\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\b50c0ac1182240e7d9d9bc2cdf098402\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\eab29935f530be2f9bce67338e259aae\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\08987ea88520c97fa8ee1f4bffdea227\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\e38f3dd539ccfca265f04c230a4ccf44\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\5cc2b81fc5accd4e2f293a6e26b2e17a\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\e70ff64f3c774f789841308c92884848\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\52fab21ab0de0b5cf35384d51755e5ef\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\8ae852ecd72c1d8111b2587fea797ca3\AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\e26a990b7c9206f67d0271f5b9b57d62\AndroidManifest.xml:17:1-30:12
+INJECTED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:2:1-45:12
+	package
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:3:5-35
+		INJECTED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:2:1-45:12
+		INJECTED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:2:1-45:12
+		INJECTED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:5:22-64
+application
+ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:7:5-43:19
+MERGED from [com.android.support:design:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\5cdd161ce098be17a13319525a6cb771\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\5cdd161ce098be17a13319525a6cb771\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\fb99670ed3c25af2c7208ec4566519b3\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\fb99670ed3c25af2c7208ec4566519b3\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\7c30a5a7ec94d31c9f1360811361a18c\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\7c30a5a7ec94d31c9f1360811361a18c\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\0dbd345ff9cc36cdd6dd91c74d129710\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\0dbd345ff9cc36cdd6dd91c74d129710\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\7345e97cf59dd0b5c2e4bd4a6a9b6db8\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\7345e97cf59dd0b5c2e4bd4a6a9b6db8\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\66103c6911344b02761b3398b2fb091f\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\66103c6911344b02761b3398b2fb091f\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\b50c0ac1182240e7d9d9bc2cdf098402\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\b50c0ac1182240e7d9d9bc2cdf098402\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\eab29935f530be2f9bce67338e259aae\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\eab29935f530be2f9bce67338e259aae\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\08987ea88520c97fa8ee1f4bffdea227\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\08987ea88520c97fa8ee1f4bffdea227\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\e38f3dd539ccfca265f04c230a4ccf44\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\e38f3dd539ccfca265f04c230a4ccf44\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\5cc2b81fc5accd4e2f293a6e26b2e17a\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\5cc2b81fc5accd4e2f293a6e26b2e17a\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\e70ff64f3c774f789841308c92884848\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\e70ff64f3c774f789841308c92884848\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\52fab21ab0de0b5cf35384d51755e5ef\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\52fab21ab0de0b5cf35384d51755e5ef\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\8ae852ecd72c1d8111b2587fea797ca3\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\8ae852ecd72c1d8111b2587fea797ca3\AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\e26a990b7c9206f67d0271f5b9b57d62\AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\e26a990b7c9206f67d0271f5b9b57d62\AndroidManifest.xml:24:5-28:19
+	android:supportsRtl
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:12:9-35
+	android:label
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:10:9-41
+	android:roundIcon
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:11:9-54
+	android:icon
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:9:9-38
+	android:allowBackup
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:8:9-35
+	android:theme
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:13:9-40
+activity#iteso.com.rentstudio.Activity_LogIn
+ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:14:9-52
+	android:name
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:14:19-49
+activity#iteso.com.rentstudio.Activity_Register_User
+ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:15:9-19:20
+	android:name
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:15:19-57
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:16:13-18:51
+	android:value
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:18:17-48
+	android:name
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:17:17-63
+activity#iteso.com.rentstudio.Activity_Register_Lessor
+ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:20:9-62
+	android:name
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:20:19-59
+activity#iteso.com.rentstudio.Activity_Main_Screen
+ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:21:9-24:59
+	android:label
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:23:13-45
+	android:theme
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:24:13-56
+	android:name
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:22:13-49
+activity#iteso.com.rentstudio.Activity_Start
+ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:25:9-33:20
+	android:theme
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:26:13-43
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:28:13-32:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:29:17-69
+	android:name
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:29:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:31:17-77
+	android:name
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:31:27-74
+activity#iteso.com.rentstudio.Activity_Register_Property
+ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:34:9-64
+	android:name
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:34:19-61
+activity#iteso.com.rentstudio.Activity_Rent
+ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:35:9-51
+	android:name
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:35:19-48
+activity#iteso.com.rentstudio.Activity_Payment_Method
+ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:36:9-61
+	android:name
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:36:19-58
+activity#iteso.com.rentstudio.Activity_paypal
+ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:37:9-53
+	android:name
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:37:19-50
+activity#iteso.com.rentstudio.Activity_card_payment
+ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:38:9-59
+	android:name
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:38:19-56
+activity#iteso.com.rentstudio.Activity_help
+ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:39:9-51
+	android:name
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:39:19-48
+activity#iteso.com.rentstudio.Activity_Settings
+ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:40:9-55
+	android:name
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:40:19-52
+activity#iteso.com.rentstudio.Activity_Notifications
+ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:41:9-60
+	android:name
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:41:19-57
+activity#iteso.com.rentstudio.Activity_Edit_User
+ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:42:9-65
+	android:name
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml:42:19-53
+uses-sdk
+INJECTED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\5cdd161ce098be17a13319525a6cb771\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\5cdd161ce098be17a13319525a6cb771\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\fb99670ed3c25af2c7208ec4566519b3\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\fb99670ed3c25af2c7208ec4566519b3\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\7c30a5a7ec94d31c9f1360811361a18c\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\7c30a5a7ec94d31c9f1360811361a18c\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\0dbd345ff9cc36cdd6dd91c74d129710\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\0dbd345ff9cc36cdd6dd91c74d129710\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\7345e97cf59dd0b5c2e4bd4a6a9b6db8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\7345e97cf59dd0b5c2e4bd4a6a9b6db8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\66103c6911344b02761b3398b2fb091f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\66103c6911344b02761b3398b2fb091f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\b50c0ac1182240e7d9d9bc2cdf098402\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\b50c0ac1182240e7d9d9bc2cdf098402\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\eab29935f530be2f9bce67338e259aae\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\eab29935f530be2f9bce67338e259aae\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\08987ea88520c97fa8ee1f4bffdea227\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\08987ea88520c97fa8ee1f4bffdea227\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\e38f3dd539ccfca265f04c230a4ccf44\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\e38f3dd539ccfca265f04c230a4ccf44\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\5cc2b81fc5accd4e2f293a6e26b2e17a\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\5cc2b81fc5accd4e2f293a6e26b2e17a\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\e70ff64f3c774f789841308c92884848\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\e70ff64f3c774f789841308c92884848\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\52fab21ab0de0b5cf35384d51755e5ef\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\52fab21ab0de0b5cf35384d51755e5ef\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\8ae852ecd72c1d8111b2587fea797ca3\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\8ae852ecd72c1d8111b2587fea797ca3\AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\e26a990b7c9206f67d0271f5b9b57d62\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\e26a990b7c9206f67d0271f5b9b57d62\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\5cdd161ce098be17a13319525a6cb771\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\cgaribay\Desktop\Proyecto Moviles\pdm_hcr\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\5cdd161ce098be17a13319525a6cb771\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\fb99670ed3c25af2c7208ec4566519b3\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\fb99670ed3c25af2c7208ec4566519b3\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\0dbd345ff9cc36cdd6dd91c74d129710\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\0dbd345ff9cc36cdd6dd91c74d129710\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\7345e97cf59dd0b5c2e4bd4a6a9b6db8\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\7345e97cf59dd0b5c2e4bd4a6a9b6db8\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\66103c6911344b02761b3398b2fb091f\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\66103c6911344b02761b3398b2fb091f\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\b50c0ac1182240e7d9d9bc2cdf098402\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\b50c0ac1182240e7d9d9bc2cdf098402\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\eab29935f530be2f9bce67338e259aae\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\eab29935f530be2f9bce67338e259aae\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\08987ea88520c97fa8ee1f4bffdea227\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\08987ea88520c97fa8ee1f4bffdea227\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\e38f3dd539ccfca265f04c230a4ccf44\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\e38f3dd539ccfca265f04c230a4ccf44\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\5cc2b81fc5accd4e2f293a6e26b2e17a\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\5cc2b81fc5accd4e2f293a6e26b2e17a\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\e70ff64f3c774f789841308c92884848\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\e70ff64f3c774f789841308c92884848\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\52fab21ab0de0b5cf35384d51755e5ef\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\52fab21ab0de0b5cf35384d51755e5ef\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\8ae852ecd72c1d8111b2587fea797ca3\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\8ae852ecd72c1d8111b2587fea797ca3\AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:design:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\5cdd161ce098be17a13319525a6cb771\AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:design:26.1.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\5cdd161ce098be17a13319525a6cb771\AndroidManifest.xml:27:13-51
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\e26a990b7c9206f67d0271f5b9b57d62\AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\e26a990b7c9206f67d0271f5b9b57d62\AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\cgaribay\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\e26a990b7c9206f67d0271f5b9b57d62\AndroidManifest.xml:26:13-58

@@ -1,0 +1,11 @@
+#Internal package file, do not edit.
+#Thu Apr 05 06:20:20 CDT 2018
+1.base=C\:\\Users\\cgaribay\\Desktop\\Proyecto Moviles\\pdm_hcr\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\15
+0.baseType=DIRECTORY
+1.baseType=DIRECTORY
+count=2
+1.set=DEX
+0.path=help.html
+0.set=ASSET
+0.base=C\:\\Users\\cgaribay\\Desktop\\Proyecto Moviles\\pdm_hcr\\app\\build\\intermediates\\assets\\debug
+1.path=classes.dex

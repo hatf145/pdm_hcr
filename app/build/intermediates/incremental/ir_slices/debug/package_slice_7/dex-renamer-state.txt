@@ -1,0 +1,4 @@
+#Thu Apr 05 06:13:18 CDT 2018
+base.0=C\:\\Users\\cgaribay\\Desktop\\Proyecto Moviles\\pdm_hcr\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\8
+path.0=classes.dex
+renamed.0=classes.dex
