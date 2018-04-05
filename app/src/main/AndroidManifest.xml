@@ -37,7 +37,8 @@
         <activity android:name=".Activity_Payment_Method" />
         <activity android:name=".Activity_paypal" />
         <activity android:name=".Activity_card_payment" />
-        <activity android:name=".Activity_help"></activity>
+        <activity android:name=".Activity_help" />
+        <activity android:name=".Activity_Settings"></activity>
     </application>
 
 </manifest>
