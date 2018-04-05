@@ -38,8 +38,9 @@
     <string name="settings_help">Ayuda</string>
     <string name="settings_eula">Términos de uso</string>
     <string name="settings_logout">Cerrar sesión</string>
-    
-
+    <string name="properties">Propiedades</string>
+    <string name="home">Home</string>
+    <string name="lessors">Arrendadores</string>
 
 
     <string-array name="properties">

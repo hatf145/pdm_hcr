@@ -18,6 +18,8 @@
     <dimen name="icon_size">50sp</dimen>
     <!--Alto de los CardView en el MainScreen-->
     <dimen name="card_height">220sp</dimen>
+    <!--Alto de los CardView pequeños en el MainScreen-->
+    <dimen name="short_card_height">150sp</dimen>
     <!--Alto de los iconos en el CardView-->
     <dimen name="icon_height">60sp</dimen>
     <!--Tamaño del texto para los CardView-->
@@ -26,5 +28,6 @@
     <dimen name="title_size">60sp</dimen>
     <dimen name="margin_top">20sp</dimen>
     <dimen name="large_text_button">20sp</dimen>
+
 
 </resources>

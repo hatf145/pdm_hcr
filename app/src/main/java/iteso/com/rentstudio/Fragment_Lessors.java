@@ -3,7 +3,7 @@ package iteso.com.rentstudio;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -13,23 +13,16 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.Date;
 
+import iteso.com.rentstudio.beans.Lessor;
 import iteso.com.rentstudio.beans.Rent;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link Fragment_Main.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link Fragment_Main#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class Fragment_Main extends android.support.v4.app.Fragment {
+public class Fragment_Lessors extends android.support.v4.app.Fragment {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    ArrayList<Rent> myDataSet;
+    ArrayList<Lessor> myDataSet;
 
-    public Fragment_Main(){
+    public Fragment_Lessors(){
 
     }
 
@@ -46,14 +39,11 @@ public class Fragment_Main extends android.support.v4.app.Fragment {
 
         myDataSet = new ArrayList<>();
 
-        myDataSet.add(new Rent("Bustamante #128", "Hector Toscano",
-                new Date(2017, 5, 14)));
-        myDataSet.add(new Rent("Pipíla #1", "Roberto Cortéz",
-                new Date(2017, 6, 4)));
-        myDataSet.add(new Rent("Manuel M. Dieguez #12", "Cynthia Garibay",
-                new Date(2017, 7, 1)));
+        myDataSet.add(new Lessor("Hector", "341-430-9315", "h.toscano.145@gmail.com"));
+        myDataSet.add(new Lessor("Cynthia", "331-015-6716", "cgaribaby@gmail.com"));
+        myDataSet.add(new Lessor("Roberto", "686-228-3850", "rcortez@gmail.com"));
 
-        mAdapter = new Adapter_Rent_Card(getActivity(), myDataSet);
+        mAdapter = new Adapter_Lessor_Card(getActivity(), myDataSet);
         recyclerView.setAdapter(mAdapter);
 
         return view;
