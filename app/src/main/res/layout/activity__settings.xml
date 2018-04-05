@@ -25,7 +25,7 @@
         android:background="#c0c0c0"/>
 
     <TextView
-
+        android:id="@+id/activity_settings_payment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/settings_payment"
@@ -40,7 +40,7 @@
         android:background="#c0c0c0"/>
 
     <TextView
-
+        android:id="@+id/activity_settings_help"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/settings_help"

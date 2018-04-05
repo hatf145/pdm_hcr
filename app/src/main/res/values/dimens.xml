@@ -26,6 +26,9 @@
     <dimen name="card_view_text_size">25sp</dimen>
     <!--Tamaño de RentStudio-->
     <dimen name="title_size">60sp</dimen>
+    <!--Ancho del panel de navegación lateral-->
+    <dimen name="left_drawer_width">240sp</dimen>
+    <dimen name="drawer_divider_height">0dp</dimen>
     <dimen name="margin_top">20sp</dimen>
     <dimen name="large_text_button">20sp</dimen>
 
