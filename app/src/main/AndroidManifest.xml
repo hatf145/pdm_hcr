@@ -22,7 +22,11 @@
                 android:value=".Activity_LogIn" />
         </activity>
         <activity android:name=".Activity_Register_Lessor" />
-        <activity android:name=".Activity_Main_Screen"/>
+        <activity
+            android:name=".Activity_Main_Screen"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
     </application>
 
 </manifest>
