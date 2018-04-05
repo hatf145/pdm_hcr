@@ -1,7 +1,5 @@
 package iteso.com.rentstudio;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -37,7 +35,7 @@ public class Fragment_Main extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_main, container, false);
+        View view = inflater.inflate(R.layout.fragment_main_screen, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.fragment_main_recycler_view);
 
         recyclerView.setHasFixedSize(true);
