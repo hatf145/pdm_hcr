@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="iteso.com.rentstudio">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
@@ -9,13 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity_LogIn">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".Activity_LogIn" />
         <activity android:name=".Activity_Register_User">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -23,10 +19,27 @@
         </activity>
         <activity android:name=".Activity_Register_Lessor" />
         <activity
+<<<<<<< HEAD
             android:name=".Activity_Main_Screen"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
             />
+=======
+            android:name=".Activity_Start"
+            android:theme="@style/noAction">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity_Register_Property" />
+        <activity android:name=".Activity_Rent" />
+        <activity android:name=".Activity_Payment_Method" />
+        <activity android:name=".Activity_paypal" />
+        <activity android:name=".Activity_card_payment" />
+        <activity android:name=".Activity_help"></activity>
+>>>>>>> b7eabfe48e50e141829607eaf194f200ce15387a
     </application>
 
 </manifest>
