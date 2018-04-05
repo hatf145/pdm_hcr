@@ -77,6 +77,10 @@ TextView notifications, eula, logout;
                 startActivity(useIntent);
                 break;
             case R.id.activity_settings_logout:
+                Intent mainIntent = new Intent(Activity_Settings.this,
+                        Activity_LogIn.class);
+                mainIntent.addFlags(mainIntent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(mainIntent);
                 finish();
                 break;
         }

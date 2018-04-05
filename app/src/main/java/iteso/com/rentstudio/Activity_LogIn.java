@@ -30,6 +30,8 @@ public class Activity_LogIn extends AppCompatActivity {
             case R.id.activity_login_loginButton:
                 Intent loginIntent = new Intent(Activity_LogIn.this,
                         Activity_Main_Screen.class);
+                loginIntent.setFlags(loginIntent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
                 startActivity(loginIntent);
         }
     }
