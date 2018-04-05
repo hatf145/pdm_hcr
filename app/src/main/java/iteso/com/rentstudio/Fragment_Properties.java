@@ -1,7 +1,6 @@
 package iteso.com.rentstudio;
 
 import android.os.Bundle;
-import android.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,26 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
-import java.util.Date;
 
-import iteso.com.rentstudio.beans.Rent;
+import iteso.com.rentstudio.beans.Property;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link Fragment_Main.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link Fragment_Main#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class Fragment_Main extends android.support.v4.app.Fragment {
+public class Fragment_Properties extends android.support.v4.app.Fragment {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    ArrayList<Rent> myDataSet;
+    ArrayList<Property> myDataSet;
 
-    public Fragment_Main(){
-
+    public Fragment_Properties(){
     }
 
     @Override
@@ -44,14 +33,11 @@ public class Fragment_Main extends android.support.v4.app.Fragment {
 
         myDataSet = new ArrayList<>();
 
-        myDataSet.add(new Rent("Bustamante #128", "Hector Toscano",
-                new Date(2017, 5, 14)));
-        myDataSet.add(new Rent("Pipíla #1", "Roberto Cortéz",
-                new Date(2017, 6, 4)));
-        myDataSet.add(new Rent("Manuel M. Dieguez #12", "Cynthia Garibay",
-                new Date(2017, 7, 1)));
+        myDataSet.add(new Property("Manuel M. Dieguez #117", "2,000"));
+        myDataSet.add(new Property("Calzada Central #230", "3,000"));
+        myDataSet.add(new Property("Bustamante #128", "1,500"));
 
-        mAdapter = new Adapter_Rent_Card(getActivity(), myDataSet);
+        mAdapter = new Adapter_Property_Card(getActivity(), myDataSet);
         recyclerView.setAdapter(mAdapter);
 
         return view;
