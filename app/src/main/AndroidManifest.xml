@@ -21,8 +21,7 @@
         <activity
             android:name=".Activity_Main_Screen"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activity_Start"
             android:theme="@style/noAction">
@@ -38,7 +37,9 @@
         <activity android:name=".Activity_paypal" />
         <activity android:name=".Activity_card_payment" />
         <activity android:name=".Activity_help" />
-        <activity android:name=".Activity_Settings"></activity>
+        <activity android:name=".Activity_Settings" />
+        <activity android:name=".Activity_Notifications" />
+        <activity android:name=".Activity_Edit_User"></activity>
     </application>
 
 </manifest>

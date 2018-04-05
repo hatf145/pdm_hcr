@@ -1,5 +1,6 @@
 package iteso.com.rentstudio;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
@@ -20,7 +21,12 @@ public class Activity_Register_User extends AppCompatActivity {
         etPassword = findViewById(R.id.activity_registerUser_password);
 
     }
+public void registrar(){
+    Intent registerIntent = new Intent(Activity_Register_User.this,
+            Activity_Settings.class);
 
+    startActivity(registerIntent);
+}
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         outState.putString("name", etName.getText().toString());
