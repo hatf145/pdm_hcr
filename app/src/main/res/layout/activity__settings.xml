@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity_Settings">
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_notification"
+        android:textSize="@dimen/large_text_button"
+        android:gravity="center"
+        android:padding="@dimen/large_text_button"
+        android:clickable="true"
+
+        />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"/>
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_payment"
+        android:gravity="center"
+        android:textSize="@dimen/large_text_button"
+        android:padding="@dimen/large_text_button"
+
+        />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"/>
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_help"
+        android:gravity="center"
+        android:textSize="@dimen/large_text_button"
+        android:padding="@dimen/large_text_button"/>
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"/>
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_eula"
+        android:gravity="center"
+        android:textSize="@dimen/large_text_button"
+        android:padding="@dimen/large_text_button"
+        android:clickable="true"
+        />
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"/>
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_logout"
+        android:gravity="center"
+        android:textSize="@dimen/large_text_button"
+        android:padding="@dimen/large_text_button"
+        android:clickable="true"
+        />
+</LinearLayout>
