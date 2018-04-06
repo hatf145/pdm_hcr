@@ -52,7 +52,7 @@ public class Activity_Main_Screen extends AppCompatActivity {
         mEditProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Activity_Settings.class);
+                Intent intent = new Intent(getApplicationContext(), Activity_Edit_User.class);
                 startActivity(intent);
             }
         });
@@ -84,7 +84,7 @@ public class Activity_Main_Screen extends AppCompatActivity {
         mAddRent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Activity_Register_Lessor.class);
+                Intent intent = new Intent(getApplicationContext(), Activity_Rent.class);
                 startActivity(intent);
             }
         });

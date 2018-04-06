@@ -1,7 +1,9 @@
 package iteso.com.rentstudio;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
 
@@ -21,6 +23,22 @@ public class Activity_Register_User extends AppCompatActivity {
 
     }
 
+    public void onClick(View v){
+
+        Intent mainIntent = new Intent (Activity_Register_User.this, Activity_Main_Screen.class);
+        startActivity(mainIntent);
+
+
+    }
+
+public void registrar(View v) {
+    Intent registerIntent = new Intent(Activity_Register_User.this,
+            Activity_Main_Screen.class);
+    registerIntent.setFlags(registerIntent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
+    startActivity(registerIntent);
+
+
+}
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         outState.putString("name", etName.getText().toString());

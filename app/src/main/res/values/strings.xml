@@ -38,6 +38,17 @@
     <string name="settings_help">Ayuda</string>
     <string name="settings_eula">Términos de uso</string>
     <string name="settings_logout">Cerrar sesión</string>
+
+
+    <string name="not_not">Notificaciones</string>
+    <string name="not_all">Activar todas</string>
+    <string name="not_payment">Vencimiento pagos</string>
+    <string name="not_renew">Renovación de contrato</string>
+    <string name="not_sound">Sonido</string>
+    <string name="edit_user">Editar Perfil</string>
+    <string name="save">Guardar</string>
+
+
     <string name="properties">Propiedades</string>
     <string name="home">Home</string>
     <string name="lessors">Arrendadores</string>
