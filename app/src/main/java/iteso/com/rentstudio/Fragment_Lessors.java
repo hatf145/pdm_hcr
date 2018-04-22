@@ -13,6 +13,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import iteso.com.rentstudio.beans.Lessor;
@@ -34,13 +35,16 @@ public class Fragment_Lessors extends android.support.v4.app.Fragment {
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
-        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+        databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                myDataSet.clear();
                 for(DataSnapshot snapshot : dataSnapshot.child("lessors").getChildren()){
                     cynthia = snapshot.getValue(Lessor.class);
-                    myDataSet.add(cynthia);
-                    mAdapter.notifyDataSetChanged();
+                    if(!myDataSet.contains(cynthia)) {
+                        myDataSet.add(cynthia);
+                        mAdapter.notifyDataSetChanged();
+                    }
                     System.out.println(cynthia.toString());
                 }
             }
@@ -57,9 +61,6 @@ public class Fragment_Lessors extends android.support.v4.app.Fragment {
         recyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(mLayoutManager);
-
-        myDataSet.add(new Lessor("Cynthia", "331-015-6716", "cgaribaby@gmail.com", "Garibaby", "Meh"));
-        myDataSet.add(new Lessor("Roberto", "686-228-3850", "rcortez@gmail.com", "Cortéz", "Meh"));
 
         mAdapter = new Adapter_Lessor_Card(getActivity(), myDataSet);
         recyclerView.setAdapter(mAdapter);

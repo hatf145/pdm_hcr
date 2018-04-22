@@ -15,7 +15,7 @@
     <string name="direction">Dirección</string>
     <string name="town">Municipio</string>
     <string name="state">Estado</string>
-    <string name="lessor_registry">Registro Arrendatario</string>
+    <string name="lessor_registry">Registro Arrendador</string>
     <string name="search">Buscador</string>
     <string name="name1">Nombre</string>
     <string name="rent">Renta</string>
@@ -54,6 +54,8 @@
     <string name="lessors">Arrendadores</string>
     <string name="edit_profile">Editar Perfil</string>
     <string name="settings">Ajustes</string>
+    <string name="lessor">Arredador</string>
+    <string name="lesse">Arredatario</string>
 
 
     <string-array name="properties">
