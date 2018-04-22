@@ -102,6 +102,7 @@
             android:layout_margin="@dimen/margin">
 
             <EditText
+
                 android:id="@+id/activity_registerUser_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -110,10 +111,28 @@
 
         </android.support.design.widget.TextInputLayout>
 
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/margin">
+            <RadioButton android:id="@+id/radio_lessor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lessor"
+                />
+            <RadioButton android:id="@+id/radio_lesse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lesse"
+        />
+        </RadioGroup>
+
+
     </LinearLayout>
 
     <Button
-        android:id="@+id/activity_loginUser_Button"
+        android:id="@+id/activity_user_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/sign_in"
@@ -124,8 +143,7 @@
         android:background="@drawable/button_ripple_effect"
         android:paddingHorizontal="@dimen/node_padding"
         android:layout_margin="@dimen/margin"
-        android:layout_gravity="center_horizontal"
-        android:onClick="registrar"/>
+        android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>
 </ScrollView>

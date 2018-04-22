@@ -68,4 +68,12 @@
         <item>No disponible</item>
     </string-array>
 
+
+    <string name="lessor">Arredador</string>
+    <string name="lesse">Arredatario</string>
+    <string name="editRent">Editar Renta</string>
+    <string name="editProperty">Editar Propiedad</string>
+
+
+
 </resources>
