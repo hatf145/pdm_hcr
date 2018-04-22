@@ -40,7 +40,7 @@
         <activity android:name=".Activity_Settings" />
         <activity android:name=".Activity_Notifications" />
         <activity android:name=".Activity_Edit_User" />
-        <activity android:name=".Activity_Eula"></activity>
+        <activity android:name=".Activity_Eula" />
     </application>
 
 </manifest>

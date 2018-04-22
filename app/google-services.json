@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "560219231962",
+    "firebase_url": "https://rentstudio-database.firebaseio.com",
+    "project_id": "rentstudio-database",
+    "storage_bucket": "rentstudio-database.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560219231962:android:c7b3ac8d5e447901",
+        "android_client_info": {
+          "package_name": "iteso.com.rentstudio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "560219231962-l3di6grv5rjn0uqn9v692442dft1jd9i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "iteso.com.rentstudio",
+            "certificate_hash": "17fb2f003967f50da04e952c270bb5b013c92cd5"
+          }
+        },
+        {
+          "client_id": "560219231962-rl4mohiseqf9al955rgv57557mbqcqo0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCa3fk1hWqmDratHnu5MBdXKNTS3PexMc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "560219231962-rl4mohiseqf9al955rgv57557mbqcqo0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
