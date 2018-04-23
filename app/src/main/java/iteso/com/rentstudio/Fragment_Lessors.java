@@ -13,7 +13,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 import iteso.com.rentstudio.beans.Lessor;
@@ -23,7 +22,6 @@ public class Fragment_Lessors extends android.support.v4.app.Fragment {
     private RecyclerView.LayoutManager mLayoutManager;
     ArrayList<Lessor> myDataSet = new ArrayList<>();
     DatabaseReference databaseReference;
-    Lessor cynthia;
 
     public Fragment_Lessors(){
 
@@ -40,12 +38,9 @@ public class Fragment_Lessors extends android.support.v4.app.Fragment {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 myDataSet.clear();
                 for(DataSnapshot snapshot : dataSnapshot.child("lessors").getChildren()){
-                    cynthia = snapshot.getValue(Lessor.class);
-                    if(!myDataSet.contains(cynthia)) {
-                        myDataSet.add(cynthia);
-                        mAdapter.notifyDataSetChanged();
-                    }
-                    System.out.println(cynthia.toString());
+                    Lessor aux = snapshot.getValue(Lessor.class);
+                    myDataSet.add(aux);
+                    mAdapter.notifyDataSetChanged();
                 }
             }
 

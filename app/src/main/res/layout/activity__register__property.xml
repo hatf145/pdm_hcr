@@ -109,11 +109,6 @@
                 android:inputType="numberDecimal"/>
         </android.support.design.widget.TextInputLayout>
 
-        <Spinner
-            android:id="@+id/activity_register_property_spinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:entries="@array/available"/>
 
     </LinearLayout>
 

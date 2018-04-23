@@ -23,7 +23,7 @@ public class Activity_Edit_User extends AppCompatActivity {
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
-        outState.putString("name", name.getText().toString());
+        outState.putString("etName", name.getText().toString());
         outState.putString("lastname", lastname.getText().toString());
         outState.putString("cellphone", cellphone.getText().toString());
         outState.putString("password", password.getText().toString());
@@ -36,8 +36,8 @@ public class Activity_Edit_User extends AppCompatActivity {
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
 
-        if(savedInstanceState.getString("name") != null)
-            name.setText(savedInstanceState.getString("name"));
+        if(savedInstanceState.getString("etName") != null)
+            name.setText(savedInstanceState.getString("etName"));
         if(savedInstanceState.getString("lastname") != null)
             lastname.setText(savedInstanceState.getString("lastname"));
         if(savedInstanceState.getString("email") != null)

@@ -14,14 +14,6 @@ import java.util.Date;
 import iteso.com.rentstudio.beans.Rent;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link Fragment_Main.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link Fragment_Main#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class Fragment_Main extends android.support.v4.app.Fragment {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;

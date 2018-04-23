@@ -46,11 +46,21 @@ public class Adapter_Property_Card extends RecyclerView.Adapter<Adapter_Property
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         holder.mHouseName.setText(mDataSet.get(position).getAddress());
-        holder.mRent.setText(mDataSet.get(position).getCost());
+        holder.mRent.setText(String.valueOf(mDataSet.get(position).getCost()));
     }
 
     @Override
     public int getItemCount() {
         return mDataSet.size();
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        return position;
     }
 }

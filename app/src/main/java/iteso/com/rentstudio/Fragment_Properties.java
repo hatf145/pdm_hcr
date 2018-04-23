@@ -7,15 +7,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 
 import iteso.com.rentstudio.beans.Property;
 
-
 public class Fragment_Properties extends android.support.v4.app.Fragment {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    ArrayList<Property> myDataSet;
+    ArrayList<Property> myDataSet = new ArrayList<>();
+    DatabaseReference databaseReference;
 
     public Fragment_Properties(){
     }
@@ -24,18 +30,31 @@ public class Fragment_Properties extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        databaseReference = FirebaseDatabase.getInstance().getReference();
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                myDataSet.clear();
+                for(DataSnapshot snapshot : dataSnapshot.child("properties").getChildren()){
+                    Property aux = snapshot.getValue(Property.class);
+                    myDataSet.add(aux);
+                    mAdapter.notifyDataSetChanged();
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
         View view = inflater.inflate(R.layout.fragment_main_screen, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.fragment_main_recycler_view);
 
         recyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(mLayoutManager);
-
-        myDataSet = new ArrayList<>();
-
-        myDataSet.add(new Property("Manuel M. Dieguez #117", "2,000"));
-        myDataSet.add(new Property("Calzada Central #230", "3,000"));
-        myDataSet.add(new Property("Bustamante #128", "1,500"));
 
         mAdapter = new Adapter_Property_Card(getActivity(), myDataSet);
         recyclerView.setAdapter(mAdapter);

@@ -1,5 +1,6 @@
 package iteso.com.rentstudio;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -40,9 +41,15 @@ public class Activity_Register_Lessor extends AppCompatActivity {
                 sPhone = etPhone.getText().toString();
 
                 if(sName != null && sLastName != null && sEmail != null && sPhone != null){
-                    Lessor aux = new Lessor(sName, sLastName, sEmail, sPhone, null);
+                    Lessor aux = new Lessor(sEmail, sLastName, sName, sPhone, "user_1");
                     String key = databaseReference.push().getKey();
                     databaseReference.child("lessors").child(key).setValue(aux);
+
+                    Intent loginIntent = new Intent(Activity_Register_Lessor.this,
+                            Activity_Main_Screen.class);
+                    loginIntent.setFlags(loginIntent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+                    startActivity(loginIntent);
                 }
             }
         });
@@ -50,7 +57,7 @@ public class Activity_Register_Lessor extends AppCompatActivity {
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
-        outState.putString("name", etName.getText().toString());
+        outState.putString("etName", etName.getText().toString());
         outState.putString("lastname", etLastname.getText().toString());
         outState.putString("email", etEmail.getText().toString());
         outState.putString("phone", etPhone.getText().toString());
@@ -62,8 +69,8 @@ public class Activity_Register_Lessor extends AppCompatActivity {
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
 
-        if(savedInstanceState.getString("name") != null)
-            etName.setText(savedInstanceState.getString("name"));
+        if(savedInstanceState.getString("etName") != null)
+            etName.setText(savedInstanceState.getString("etName"));
 
         if(savedInstanceState.getString("lastname") != null)
             etLastname.setText(savedInstanceState.getString("lastname"));

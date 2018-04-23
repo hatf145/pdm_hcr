@@ -82,7 +82,7 @@ public void registrar(View v) {
 }
     @Override
     protected void onSaveInstanceState(Bundle outState) {
-        outState.putString("name", etName.getText().toString());
+        outState.putString("etName", etName.getText().toString());
         outState.putString("lastname", etLastname.getText().toString());
         outState.putString("email", etEmail.getText().toString());
         outState.putString("phone", etPhone.getText().toString());
@@ -94,8 +94,8 @@ public void registrar(View v) {
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
 
-        if(savedInstanceState.getString("name") != null)
-            etName.setText(savedInstanceState.getString("name"));
+        if(savedInstanceState.getString("etName") != null)
+            etName.setText(savedInstanceState.getString("etName"));
 
         if(savedInstanceState.getString("lastname") != null)
             etLastname.setText(savedInstanceState.getString("lastname"));
