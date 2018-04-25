@@ -37,6 +37,7 @@ public class Fragment_Properties extends android.support.v4.app.Fragment {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 myDataSet.clear();
+              //  for(DataSnapshot snapshot : dataSnapshot.child("2US6Y6QcqhdsxsrLjGag4WPwnaI3").child("properties").getChildren()){
                 for(DataSnapshot snapshot : dataSnapshot.child("2US6Y6QcqhdsxsrLjGag4WPwnaI3").child("properties").getChildren()){
                     Property aux = snapshot.getValue(Property.class);
                     myDataSet.add(aux);

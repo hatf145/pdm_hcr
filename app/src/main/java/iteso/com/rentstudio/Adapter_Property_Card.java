@@ -15,7 +15,6 @@ import java.util.ArrayList;
 
 import iteso.com.rentstudio.beans.Property;
 
-import static android.app.Activity.RESULT_OK;
 
 public class Adapter_Property_Card extends RecyclerView.Adapter<Adapter_Property_Card.ViewHolder>{
     ArrayList<Property> mDataSet;
@@ -35,8 +34,6 @@ public class Adapter_Property_Card extends RecyclerView.Adapter<Adapter_Property
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        //public TextView name;
-       // public TextView cost;
         public TextView address;
         public TextView cost;
         public TextView availability;
@@ -53,13 +50,6 @@ public class Adapter_Property_Card extends RecyclerView.Adapter<Adapter_Property
             mEventLayout = (LinearLayout) v.findViewById(R.id.property_card_layout);//////////////////////////
             name = v.findViewById(R.id.property_card_house_text);
            cost = v.findViewById(R.id.property_card_rent_text);
-            /*address = v.findViewById(R.id.property_card_house_text);
-            cost = v.findViewById(R.id.property_money);
-            availability = v.findViewById(R.id.property_availability);
-            name = v.findViewById(R.id.property_house);
-            payday = v.findViewById(R.id.property_payday);
-            state = v.findViewById(R.id.property_state);
-            town = v.findViewById(R.id.property_town);*/
 
         }
     }
@@ -68,14 +58,7 @@ public class Adapter_Property_Card extends RecyclerView.Adapter<Adapter_Property
     public void onBindViewHolder(final ViewHolder holder, final int position) {
        holder.cost.setText(String.valueOf(mDataSet.get(position).getCost()));
         holder.name.setText(mDataSet.get(position).getName());
-      /*  holder.address.setText(mDataSet.get(position).getAddress());
-        holder.cost.setText(String.valueOf(mDataSet.get(position).getCost()));
-        holder.availability.setText(mDataSet.get(position).getLessor());
-        holder.name.setText(mDataSet.get(position).getName());
-        holder.address.setText(mDataSet.get(position).getAddress());
-        holder.payday.setText(mDataSet.get(position).getPayday());
-        holder.state.setText(mDataSet.get(position).getState());
-        holder.town.setText(mDataSet.get(position).getTown());*/
+
         holder.mEventLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,7 +72,6 @@ public class Adapter_Property_Card extends RecyclerView.Adapter<Adapter_Property
                 iit.setTown(mDataSet.get(position).getTown());
                 Intent intent=new Intent(context,ActivityPropertyScreen.class);
                 intent.putExtra("ITEM",iit);
-              //intent.putExtra("ITEM",0);
                 ((Activity_Main_Screen) context).startActivityForResult(intent,9999);
 
             }
