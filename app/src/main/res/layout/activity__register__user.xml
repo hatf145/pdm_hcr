@@ -141,7 +141,7 @@
             android:paddingHorizontal="@dimen/node_padding"
             android:layout_margin="@dimen/margin"
             android:layout_gravity="center_horizontal"
-            android:onClick="registrar"/>
+            android:onClick="onClick"/>
 
     </LinearLayout>
 
