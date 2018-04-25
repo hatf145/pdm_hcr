@@ -53,7 +53,7 @@ public class Adapter_Rent_Card extends RecyclerView.Adapter<Adapter_Rent_Card.Vi
     public void onBindViewHolder(ViewHolder holder, final int position) {
         holder.mHouseName.setText(mDataSet.get(position).getProperty());
         holder.mLessorName.setText(mDataSet.get(position).getLessor());
-        holder.mDate.setText(mDataSet.get(position).getCycle().toString());
+        holder.mDate.setText(mDataSet.get(position).getDate());
     }
 
     @Override
