@@ -1,5 +1,6 @@
 package iteso.com.rentstudio;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -11,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 
@@ -102,6 +104,9 @@ public class Activity_Main_Screen extends AppCompatActivity {
         });
     }
 
+
+
+
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         public SectionsPagerAdapter(FragmentManager fm) {
@@ -147,4 +152,13 @@ public class Activity_Main_Screen extends AppCompatActivity {
             return null;
         }
     }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode == 9999){
+            if(resultCode == Activity.RESULT_OK){
+                fragment_properties.onActivityResult(requestCode, resultCode, data);
+            }
+        }
+    }
 }
+

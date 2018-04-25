@@ -1,5 +1,6 @@
 package iteso.com.rentstudio;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -48,5 +49,8 @@ public class Fragment_Main extends android.support.v4.app.Fragment {
 
         return view;
     }
-
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 }
