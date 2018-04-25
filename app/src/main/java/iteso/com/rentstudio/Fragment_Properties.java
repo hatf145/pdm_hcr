@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -22,6 +23,7 @@ public class Fragment_Properties extends android.support.v4.app.Fragment {
     private RecyclerView.LayoutManager mLayoutManager;
     ArrayList<Property> myDataSet = new ArrayList<>();
     DatabaseReference databaseReference;
+    FirebaseAuth mAuth;
 
     public Fragment_Properties(){
     }
@@ -31,12 +33,13 @@ public class Fragment_Properties extends android.support.v4.app.Fragment {
                              Bundle savedInstanceState) {
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
+        mAuth = FirebaseAuth.getInstance();
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 myDataSet.clear();
-                for(DataSnapshot snapshot : dataSnapshot.child("properties").getChildren()){
+                for(DataSnapshot snapshot : dataSnapshot.child(mAuth.getCurrentUser().getUid()).child("properties").getChildren()){
                     Property aux = snapshot.getValue(Property.class);
                     myDataSet.add(aux);
                     mAdapter.notifyDataSetChanged();

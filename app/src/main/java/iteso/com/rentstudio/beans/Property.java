@@ -11,13 +11,12 @@ public class Property implements Parcelable {
     private Integer payday;
     private String state;
     private String town;
-    private String user;
 
     public Property(){
 
     }
 
-    public Property(String address, int cost, String lessor, String name, int payday, String state, String town, String user) {
+    public Property(String address, Integer cost, String lessor, String name, Integer payday, String state, String town) {
         this.address = address;
         this.cost = cost;
         this.lessor = lessor;
@@ -25,7 +24,6 @@ public class Property implements Parcelable {
         this.payday = payday;
         this.state = state;
         this.town = town;
-        this.user = user;
     }
 
     public String getAddress() {
@@ -36,11 +34,11 @@ public class Property implements Parcelable {
         this.address = address;
     }
 
-    public int getCost() {
+    public Integer getCost() {
         return cost;
     }
 
-    public void setCost(int cost) {
+    public void setCost(Integer cost) {
         this.cost = cost;
     }
 
@@ -60,11 +58,11 @@ public class Property implements Parcelable {
         this.name = name;
     }
 
-    public int getPayday() {
+    public Integer getPayday() {
         return payday;
     }
 
-    public void setPayday(int payday) {
+    public void setPayday(Integer payday) {
         this.payday = payday;
     }
 
@@ -84,13 +82,6 @@ public class Property implements Parcelable {
         this.town = town;
     }
 
-    public String getUser() {
-        return user;
-    }
-
-    public void setUser(String user) {
-        this.user = user;
-    }
 
     @Override
     public int describeContents() {
@@ -100,24 +91,22 @@ public class Property implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.address);
-        dest.writeInt(this.cost);
+        dest.writeValue(this.cost);
         dest.writeString(this.lessor);
         dest.writeString(this.name);
-        dest.writeInt(this.payday);
+        dest.writeValue(this.payday);
         dest.writeString(this.state);
         dest.writeString(this.town);
-        dest.writeString(this.user);
     }
 
     protected Property(Parcel in) {
         this.address = in.readString();
-        this.cost = in.readInt();
+        this.cost = (Integer) in.readValue(Integer.class.getClassLoader());
         this.lessor = in.readString();
         this.name = in.readString();
-        this.payday = in.readInt();
+        this.payday = (Integer) in.readValue(Integer.class.getClassLoader());
         this.state = in.readString();
         this.town = in.readString();
-        this.user = in.readString();
     }
 
     public static final Creator<Property> CREATOR = new Creator<Property>() {

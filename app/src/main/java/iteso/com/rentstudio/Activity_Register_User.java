@@ -1,28 +1,35 @@
 package iteso.com.rentstudio;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Spinner;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import iteso.com.rentstudio.beans.User;
 
-public class Activity_Register_User extends AppCompatActivity {
-    EditText etName, etLastname, etEmail, etPhone, etPassword;
-    String sName, sLastname, sEmail, sPhone, sPassword;
-    Boolean type;
-    Button btnRegister;
-    RadioGroup radioGroup;
-    RadioButton radioButtonA, radioButtonB;
-    DatabaseReference databaseReference;
+public class Activity_Register_User extends AppCompatActivity implements View.OnClickListener {
+    private EditText etName, etLastname, etEmail, etPhone, etPassword;
+    private String sName, sLastname, sEmail, sPhone, sPassword;
+    private Boolean type;
+    private RadioGroup radioGroup;
+    private RadioButton radioButtonA, radioButtonB;
+    private DatabaseReference databaseReference;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,49 +44,85 @@ public class Activity_Register_User extends AppCompatActivity {
         radioGroup = findViewById(R.id.activity_registerUser_radioGroup);
         radioButtonA = findViewById(R.id.radio_lessor);
         radioButtonB = findViewById(R.id.radio_lesse);
-        btnRegister = findViewById(R.id.activity_registerUser_register);
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
+        mAuth = FirebaseAuth.getInstance();
 
-        btnRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sName = etName.getText().toString();
-                sLastname = etLastname.getText().toString();
-                sEmail = etEmail.getText().toString();
-                sPhone = etPhone.getText().toString();
-                sPassword = etPassword.getText().toString();
-                type = radioButtonA.isSelected();
-
-                if(sName != null && sLastname != null && sEmail != null && sPhone != null && sPassword != null && type != null){
-                    User aux = new User(sEmail, sLastname, sName, sPassword, sPhone, (type ? 1 : 0));
-                    String key = databaseReference.push().getKey();
-                    databaseReference.child("users").child(key).setValue(aux);
-                }
-
-                Intent intent = new Intent(Activity_Register_User.this, Activity_LogIn.class);
-                startActivity(intent);
-                finish();
-            }
-        });
     }
 
+    @Override
     public void onClick(View v){
+        if (v.getId() == R.id.activity_registerUser_register) {
+            sName = etName.getText().toString();
+            sLastname = etLastname.getText().toString();
+            sEmail = etEmail.getText().toString();
+            sPhone = etPhone.getText().toString();
+            sPassword = etPassword.getText().toString();
+            type = radioButtonA.isSelected();
 
-        Intent mainIntent = new Intent (Activity_Register_User.this, Activity_Main_Screen.class);
-        startActivity(mainIntent);
+            createAccount(sEmail, sPassword);
+        }
+    }
 
+    private void createAccount(final String email, String password){
+        if(!validateForm()){
+            return;
+        }
+
+        mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            databaseReference.child("users").child(user.getUid()).setValue(email);
+                            updateUI(user);
+                        } else {
+                            Log.e("OHSHIT", "onComplete: Failed=" + task.getException().getMessage());
+                            updateUI(null);
+                        }
+                    }
+                });
+    }
+
+    public void updateUI(FirebaseUser user){
+        if(user != null){
+            if(sName != null && sLastname != null && sEmail != null && sPhone != null && sPassword != null && type != null){
+                User aux = new User(sEmail, sLastname, sName, sPassword, sPhone, (type ? 1 : 0));
+                databaseReference.child(mAuth.getCurrentUser().getUid()).child("info").setValue(aux);
+            }
+
+            Intent loginIntent = new Intent(Activity_Register_User.this,
+                    Activity_Main_Screen.class);
+            startActivity(loginIntent);
+        } else {
+
+        }
 
     }
 
-public void registrar(View v) {
-    Intent registerIntent = new Intent(Activity_Register_User.this,
-            Activity_Main_Screen.class);
-    registerIntent.setFlags(registerIntent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
-    startActivity(registerIntent);
+    private boolean validateForm() {
+        boolean valid = true;
 
+        String email = etEmail.getText().toString();
+        if (TextUtils.isEmpty(email)) {
+            etEmail.setError("Required.");
+            valid = false;
+        } else {
+            etEmail.setError(null);
+        }
 
-}
+        String password = etPassword.getText().toString();
+        if (TextUtils.isEmpty(password)) {
+            etPassword.setError("Required.");
+            valid = false;
+        } else {
+            etPassword.setError(null);
+        }
+
+        return valid;
+    }
+
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         outState.putString("etName", etName.getText().toString());

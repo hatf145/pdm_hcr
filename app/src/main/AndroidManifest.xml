@@ -32,7 +32,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity_Register_Property" />
-        <activity android:name=".Activity__Register_Rent" />
+        <activity android:name=".Activity_Register_Rent" />
         <activity android:name=".Activity_Payment_Method" />
         <activity android:name=".Activity_paypal" />
         <activity android:name=".Activity_card_payment" />

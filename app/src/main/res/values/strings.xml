@@ -30,6 +30,7 @@
     <string name="card_number_hint">1111 1111 1111 1111</string>
     <string name="card_expiration_hint">01/25</string>
     <string name="card_cvc_hint">123</string>
+    <string name="log_out">Log Out</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

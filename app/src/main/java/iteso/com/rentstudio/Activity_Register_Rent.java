@@ -10,6 +10,7 @@ import android.widget.DatePicker;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -22,22 +23,27 @@ import java.util.Calendar;
 import iteso.com.rentstudio.beans.Lessor;
 import iteso.com.rentstudio.beans.Property;
 
-public class Activity__Register_Rent extends AppCompatActivity {
+public class Activity_Register_Rent extends AppCompatActivity {
     Spinner lessor, property;
     Calendar calendar;
     TextView date;
     int year, month, day;
-    Button brent;
+    Button btnRent;
     ArrayList<String> lNames, pNames;
+
+    DatabaseReference databaseReference;
+    FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity__register_rent);
 
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+        databaseReference = FirebaseDatabase.getInstance().getReference();
+        mAuth = FirebaseAuth.getInstance();
 
         date=findViewById(R.id.activity_rent_date);
-        brent=findViewById(R.id.activity_brent_register);
+        btnRent =findViewById(R.id.activity_brent_register);
         lessor=findViewById(R.id.activity_rent_lessor);
         property=findViewById(R.id.activity_rent_property);
         lNames = new ArrayList<>();
@@ -48,21 +54,21 @@ public class Activity__Register_Rent extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 lNames.clear();
                 pNames.clear();
-                for(DataSnapshot snapshot : dataSnapshot.child("lessors").getChildren()){
+                for(DataSnapshot snapshot : dataSnapshot.child(mAuth.getCurrentUser().getUid()).child("lessors").getChildren()){
                     Lessor auxLessor = snapshot.getValue(Lessor.class);
                     lNames.add(auxLessor.getName());
                 }
 
-                for(DataSnapshot snapshot : dataSnapshot.child("properties").getChildren()){
+                for(DataSnapshot snapshot : dataSnapshot.child(mAuth.getCurrentUser().getUid()).child("properties").getChildren()){
                     Property auxProperty = snapshot.getValue(Property.class);
                     pNames.add(auxProperty.getName());
                 }
 
-                ArrayAdapter<String> lessorAdapter = new ArrayAdapter<>(Activity__Register_Rent.this, android.R.layout.simple_spinner_item, lNames);
+                ArrayAdapter<String> lessorAdapter = new ArrayAdapter<>(Activity_Register_Rent.this, android.R.layout.simple_spinner_item, lNames);
                 lessorAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 lessor.setAdapter(lessorAdapter);
 
-                ArrayAdapter<String> propertyAdapter = new ArrayAdapter<>(Activity__Register_Rent.this, android.R.layout.simple_spinner_item, pNames);
+                ArrayAdapter<String> propertyAdapter = new ArrayAdapter<>(Activity_Register_Rent.this, android.R.layout.simple_spinner_item, pNames);
                 propertyAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 property.setAdapter(propertyAdapter);
             }
@@ -74,15 +80,15 @@ public class Activity__Register_Rent extends AppCompatActivity {
         });
 
         calendar=Calendar.getInstance();
-        day=calendar.get(Calendar.DAY_OF_MONTH);
-        month=calendar.get(Calendar.MONTH);
-        year=calendar.get(Calendar.YEAR);
-        date.setText(day + "");
+        day = calendar.get(Calendar.DAY_OF_MONTH);
+        month = calendar.get(Calendar.MONTH);
+        year = calendar.get(Calendar.YEAR);
+        date.setText(day + "/" + month + "/" + year);
 
         date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DatePickerDialog datePickerDialog=new DatePickerDialog(Activity__Register_Rent.this, new DatePickerDialog.OnDateSetListener() {
+                DatePickerDialog datePickerDialog=new DatePickerDialog(Activity_Register_Rent.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker datePicker, int iyear, int iday, int imonth) {
                         date.setText(iday+"/"+imonth+"/"+iyear);
@@ -91,8 +97,41 @@ public class Activity__Register_Rent extends AppCompatActivity {
                 datePickerDialog.show();
             }
         });
+
+        btnRent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String auxLessor = lessor.getSelectedItem().toString();
+                String auxProperty = property.getSelectedItem().toString();
+                createRent(auxLessor, auxProperty, day);
+            }
+        });
     }
-    //Sppiners tienen que se dinamicos-->
+
+    public void createRent(final String lessor, final String property, final int day){
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for(DataSnapshot snapshot : dataSnapshot.child(mAuth.getCurrentUser().getUid()).child("properties").getChildren()){
+                    Property aux = snapshot.getValue(Property.class);
+                    if(aux.getName() == property){
+                        System.out.println("GOT HERE");
+                        aux.setLessor(lessor);
+                        aux.setPayday(day);
+                        databaseReference.child(mAuth.getCurrentUser().getUid()).child("properties").child(snapshot.getKey()).setValue(aux);
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+        databaseReference.child(mAuth.getCurrentUser().getUid()).child("properties").orderByChild("name").equalTo("property");
+
+    }
+
     @Override
     public void onSaveInstanceState(Bundle outState) {
         outState.putString("date", date.getText().toString());

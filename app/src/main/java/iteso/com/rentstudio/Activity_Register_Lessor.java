@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -18,6 +19,7 @@ public class Activity_Register_Lessor extends AppCompatActivity {
     String sName, sLastName, sEmail, sPhone;
     Button btnRegisterLessor;
     DatabaseReference databaseReference;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public class Activity_Register_Lessor extends AppCompatActivity {
         setContentView(R.layout.activity__register__lessor);
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
+        mAuth = FirebaseAuth.getInstance();
 
         etName = findViewById(R.id.activity_registerLessor_name);
         etLastname = findViewById(R.id.activity_registerLessor_lastname);
@@ -41,9 +44,9 @@ public class Activity_Register_Lessor extends AppCompatActivity {
                 sPhone = etPhone.getText().toString();
 
                 if(sName != null && sLastName != null && sEmail != null && sPhone != null){
-                    Lessor aux = new Lessor(sEmail, sLastName, sName, sPhone, "user_1");
+                    Lessor aux = new Lessor(sEmail, sLastName, sName, sPhone);
                     String key = databaseReference.push().getKey();
-                    databaseReference.child("lessors").child(key).setValue(aux);
+                    databaseReference.child(mAuth.getCurrentUser().getUid()).child("lessors").child(key).setValue(aux);
 
                     Intent loginIntent = new Intent(Activity_Register_Lessor.this,
                             Activity_Main_Screen.class);

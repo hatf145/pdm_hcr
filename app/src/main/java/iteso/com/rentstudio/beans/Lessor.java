@@ -11,33 +11,15 @@ public class Lessor implements Parcelable {
     private String lastname;
     private String name;
     private String phone;
-    private String user;
 
     public Lessor(){
 
     }
 
-    public Lessor(String email, String lastname, String name, String phone, String user) {
+    public Lessor(String email, String lastname, String name, String phone) {
         this.email = email;
         this.lastname = lastname;
         this.name = name;
-        this.phone = phone;
-        this.user = user;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
         this.phone = phone;
     }
 
@@ -57,25 +39,22 @@ public class Lessor implements Parcelable {
         this.lastname = lastname;
     }
 
-    public String getUser() {
-        return user;
+    public String getName() {
+        return name;
     }
 
-    public void setUser(String user) {
-        this.user = user;
+    public void setName(String name) {
+        this.name = name;
     }
 
-
-    @Override
-    public String toString() {
-        return "Lessor{" +
-                "email='" + email + '\'' +
-                ", lastname='" + lastname + '\'' +
-                ", name='" + name + '\'' +
-                ", phone='" + phone + '\'' +
-                ", user='" + user + '\'' +
-                '}';
+    public String getPhone() {
+        return phone;
     }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
 
     @Override
     public int describeContents() {
@@ -88,15 +67,13 @@ public class Lessor implements Parcelable {
         dest.writeString(this.lastname);
         dest.writeString(this.name);
         dest.writeString(this.phone);
-        dest.writeString(this.user);
     }
 
-    public Lessor(Parcel in) {
+    protected Lessor(Parcel in) {
         this.email = in.readString();
         this.lastname = in.readString();
         this.name = in.readString();
         this.phone = in.readString();
-        this.user = in.readString();
     }
 
     public static final Creator<Lessor> CREATOR = new Creator<Lessor>() {

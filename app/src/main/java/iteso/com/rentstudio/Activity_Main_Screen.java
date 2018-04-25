@@ -14,6 +14,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.view.View;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Activity_Main_Screen extends AppCompatActivity {
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
@@ -21,7 +23,8 @@ public class Activity_Main_Screen extends AppCompatActivity {
     public Fragment_Main fragment_main;
     public Fragment_Lessors fragment_lessors;
     public Fragment_Properties fragment_properties;
-    TextView mEditProfile, mSettings, mAddProperty, mAddLessor, mAddRent;
+    TextView mEditProfile, mSettings, mAddProperty, mAddLessor, mAddRent, mLogout;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +36,11 @@ public class Activity_Main_Screen extends AppCompatActivity {
         mAddProperty = findViewById(R.id.drawer_add_property);
         mAddLessor = findViewById(R.id.drawer_add_lessor);
         mAddRent = findViewById(R.id.drawer_add_rent);
+        mLogout = findViewById(R.id.drawer_log_out);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
 
+        mAuth = FirebaseAuth.getInstance();
 
         setSupportActionBar(toolbar);
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -46,6 +51,15 @@ public class Activity_Main_Screen extends AppCompatActivity {
         mViewPager.setOffscreenPageLimit(3);
 
         tabLayout.setupWithViewPager(mViewPager);
+
+        mLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAuth.signOut();
+                Intent intent = new Intent(Activity_Main_Screen.this, Activity_LogIn.class);
+                startActivity(intent);
+            }
+        });
 
         mEditProfile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,7 +96,7 @@ public class Activity_Main_Screen extends AppCompatActivity {
         mAddRent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Activity__Register_Rent.class);
+                Intent intent = new Intent(getApplicationContext(), Activity_Register_Rent.class);
                 startActivity(intent);
             }
         });

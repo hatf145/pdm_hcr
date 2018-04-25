@@ -35,7 +35,7 @@ TextView rent;
             }
         };
         Timer timer=new Timer();
-        timer.schedule(task,2000);
+        timer.schedule(task,1000);
     }
 }
 

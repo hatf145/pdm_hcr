@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -21,6 +22,7 @@ public class Activity_Register_Property extends AppCompatActivity {
     int iRent;
     Button btnProperty;
     DatabaseReference databaseReference;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,7 @@ public class Activity_Register_Property extends AppCompatActivity {
         btnProperty =findViewById(R.id.activity_bregister_property);
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
+        mAuth = FirebaseAuth.getInstance();
 
         btnProperty.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,9 +49,9 @@ public class Activity_Register_Property extends AppCompatActivity {
 
                 if(sName != null && sDirection != null && sTown != null && sState != null && sRent != null) {
                     iRent = Integer.parseInt(sRent);
-                    Property aux = new Property(sDirection, iRent, "lessor_1", sName, 0, sState, sTown, "user_1");
+                    Property aux = new Property(sDirection, iRent, "lessor_1", sName, 0, sState, sTown);
                     String key = databaseReference.push().getKey();
-                    databaseReference.child("properties").child(key).setValue(aux);
+                    databaseReference.child(mAuth.getCurrentUser().getUid()).child("properties").child(key).setValue(aux);
 
                     Intent loginIntent = new Intent(Activity_Register_Property.this,
                             Activity_Main_Screen.class);
