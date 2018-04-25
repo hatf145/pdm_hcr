@@ -2,6 +2,7 @@ package iteso.com.rentstudio.beans;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.widget.LinearLayout;
 
 public class Property implements Parcelable {
     private String address;
@@ -11,6 +12,7 @@ public class Property implements Parcelable {
     private Integer payday;
     private String state;
     private String town;
+
 
     public Property(){
 

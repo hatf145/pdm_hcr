@@ -55,8 +55,6 @@
     <string name="lessors">Arrendadores</string>
     <string name="edit_profile">Editar Perfil</string>
     <string name="settings">Ajustes</string>
-    <string name="lessor">Arredador</string>
-    <string name="lesse">Arredatario</string>
 
 
     <string-array name="properties">
@@ -77,5 +75,12 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
+
+    <string name="lessor">Arredador</string>
+    <string name="lesse">Arredatario</string>
+    <string name="editRent">Editar Renta</string>
+    <string name="editProperty">Editar Propiedad</string>
+
 
 </resources>

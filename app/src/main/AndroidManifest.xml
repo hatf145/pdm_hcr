@@ -41,6 +41,10 @@
         <activity android:name=".Activity_Notifications" />
         <activity android:name=".Activity_Edit_User" />
         <activity android:name=".Activity_Eula" />
+        <activity android:name=".ActivityEditRent" />
+        <activity android:name=".ActivityEditProperty" />
+        <activity android:name=".ActivityRentScreen" />
+        <activity android:name=".ActivityPropertyScreen"></activity>
     </application>
 
 </manifest>

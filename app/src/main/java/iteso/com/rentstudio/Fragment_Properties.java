@@ -1,5 +1,6 @@
 package iteso.com.rentstudio;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -40,6 +41,7 @@ public class Fragment_Properties extends android.support.v4.app.Fragment {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 myDataSet.clear();
                 for(DataSnapshot snapshot : dataSnapshot.child(mAuth.getCurrentUser().getUid()).child("properties").getChildren()){
+
                     Property aux = snapshot.getValue(Property.class);
                     myDataSet.add(aux);
                     mAdapter.notifyDataSetChanged();
@@ -64,5 +66,8 @@ public class Fragment_Properties extends android.support.v4.app.Fragment {
 
         return view;
     }
-
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 }
