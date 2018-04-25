@@ -15,7 +15,7 @@
     <string name="direction">Dirección</string>
     <string name="town">Municipio</string>
     <string name="state">Estado</string>
-    <string name="lessor_registry">Registro Arrendatario</string>
+    <string name="lessor_registry">Registro Arrendador</string>
     <string name="search">Buscador</string>
     <string name="name1">Nombre</string>
     <string name="rent">Renta</string>
@@ -67,13 +67,19 @@
         <item>Disponible</item>
         <item>No disponible</item>
     </string-array>
+    <string name="title_activity_side_menu_ex">SideMenuEx</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 
 
     <string name="lessor">Arredador</string>
     <string name="lesse">Arredatario</string>
     <string name="editRent">Editar Renta</string>
     <string name="editProperty">Editar Propiedad</string>
-
 
 
 </resources>

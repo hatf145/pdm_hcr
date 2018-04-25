@@ -1,9 +1,9 @@
 package iteso.com.rentstudio;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -12,9 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.view.Menu;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 
 public class Activity_Main_Screen extends AppCompatActivity {
@@ -46,6 +45,7 @@ public class Activity_Main_Screen extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
         mViewPager.setCurrentItem(1);
+        mViewPager.setOffscreenPageLimit(3);
 
         tabLayout.setupWithViewPager(mViewPager);
 
@@ -84,11 +84,14 @@ public class Activity_Main_Screen extends AppCompatActivity {
         mAddRent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Activity_Rent.class);
+                Intent intent = new Intent(getApplicationContext(), Activity__Register_Rent.class);
                 startActivity(intent);
             }
         });
     }
+
+
+
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
@@ -135,4 +138,13 @@ public class Activity_Main_Screen extends AppCompatActivity {
             return null;
         }
     }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode == 9999){
+            if(resultCode == Activity.RESULT_OK){
+                fragment_properties.onActivityResult(requestCode, resultCode, data);
+            }
+        }
+    }
 }
+

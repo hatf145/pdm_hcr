@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -18,6 +21,9 @@ TextView rent;
         setContentView(R.layout.activity_start);
         icon=findViewById(R.id.activity_start_logo);
         rent=findViewById(R.id.activity_start_title);
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+        databaseReference.keepSynced(true);
         TimerTask task=new TimerTask() {
             @Override
             public void run() {

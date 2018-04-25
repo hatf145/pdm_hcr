@@ -32,7 +32,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity_Register_Property" />
-        <activity android:name=".Activity_Rent" />
+        <activity android:name=".Activity__Register_Rent" />
         <activity android:name=".Activity_Payment_Method" />
         <activity android:name=".Activity_paypal" />
         <activity android:name=".Activity_card_payment" />
@@ -42,7 +42,9 @@
         <activity android:name=".Activity_Edit_User" />
         <activity android:name=".Activity_Eula" />
         <activity android:name=".ActivityEditRent" />
-        <activity android:name=".ActivityEditProperty"></activity>
+        <activity android:name=".ActivityEditProperty" />
+        <activity android:name=".ActivityRentScreen" />
+        <activity android:name=".ActivityPropertyScreen"></activity>
     </application>
 
 </manifest>
