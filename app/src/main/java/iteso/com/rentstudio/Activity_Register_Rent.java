@@ -1,6 +1,7 @@
 package iteso.com.rentstudio;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -104,6 +105,9 @@ public class Activity_Register_Rent extends AppCompatActivity {
                 String auxLessor = lessor.getSelectedItem().toString();
                 String auxProperty = property.getSelectedItem().toString();
                 createRent(auxLessor, auxProperty, day);
+                Intent backHome = new Intent(Activity_Register_Rent.this, Activity_Main_Screen.class);
+                backHome.setFlags(backHome.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(backHome);
             }
         });
     }

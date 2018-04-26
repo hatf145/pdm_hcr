@@ -51,7 +51,7 @@ public class Fragment_Main extends android.support.v4.app.Fragment {
                 myDataSet.clear();
                 for(DataSnapshot snapshot : dataSnapshot.child(mAuth.getCurrentUser().getUid()).child("properties").getChildren()){
                     Property aux = snapshot.getValue(Property.class);
-                    if(aux.getLessor()!="lessor_1") {
+                    if(!aux.getLessor().equals("lessor_1")) {
                         for(DataSnapshot snapshot2 : dataSnapshot.child(mAuth.getCurrentUser().getUid()).child("lessors").getChildren()){
                             Lessor aux2 = snapshot2.getValue(Lessor.class);
                             if(aux2.getName().equals(aux.getLessor())) {
@@ -60,6 +60,7 @@ public class Fragment_Main extends android.support.v4.app.Fragment {
                                 mAdapter.notifyDataSetChanged();
                             }
                         }
+
                     }
                 }
             }
