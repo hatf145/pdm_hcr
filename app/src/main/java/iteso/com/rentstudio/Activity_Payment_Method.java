@@ -1,11 +1,14 @@
 package iteso.com.rentstudio;
 
+import android.support.v7.app.AppCompatActivity;
+
+/*
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -30,12 +33,14 @@ import com.braintreepayments.api.internal.HttpClient;
 import com.braintreepayments.api.models.PaymentMethodNonce;
 import com.loopj.android.http.*;
 import com.paypal.android.sdk.onetouch.core.metadata.v;
+*/
 
 import java.util.HashMap;
 import java.util.Map;
 
 
 public class Activity_Payment_Method extends AppCompatActivity {
+    /*
 
     final int REQUEST_CODE = 1;
   //  final String get_token = "http://192.168.1.12/braintreepayment/main.php";
@@ -193,4 +198,5 @@ public class Activity_Payment_Method extends AppCompatActivity {
             progress.dismiss();
         }
     }
+    */
 }

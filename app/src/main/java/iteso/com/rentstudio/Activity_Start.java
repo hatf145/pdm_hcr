@@ -22,8 +22,8 @@ TextView rent;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-        icon=findViewById(R.id.activity_start_logo);
-        rent=findViewById(R.id.activity_start_title);
+        icon = findViewById(R.id.activity_start_logo);
+        rent = findViewById(R.id.activity_start_title);
         FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
         databaseReference.keepSynced(true);
@@ -38,12 +38,7 @@ TextView rent;
             }
         };
         Timer timer=new Timer();
-
-        timer.schedule(task,2000);
-
-
         timer.schedule(task,1000);
-
     }
 }
 

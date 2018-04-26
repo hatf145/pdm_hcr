@@ -168,25 +168,9 @@ public class Activity_Main_Screen extends AppCompatActivity {
                     case 2:
                         fragment_lessors.onActivityResult(requestCode, resultCode, data);
                         break;
-
-
-
                 }
             }
         }
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
