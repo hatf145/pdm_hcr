@@ -41,14 +41,14 @@ public class Fragment_Main extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        databaseReference = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
-        databaseReference = FirebaseDatabase.getInstance().getReference().child(mAuth.getCurrentUser().getUid());
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 myDataSet.clear();
-                for(DataSnapshot snapshot : dataSnapshot.child("properties").getChildren()){
+                for(DataSnapshot snapshot : dataSnapshot.child(mAuth.getCurrentUser().getUid()).child("properties").getChildren()){
                     Property aux = snapshot.getValue(Property.class);
                     if(!aux.getLessor().equals("lessor_1")) {
                         Rent auxRent = new Rent(aux.getName(), aux.getLessor(), myDate(aux.getPayday()));

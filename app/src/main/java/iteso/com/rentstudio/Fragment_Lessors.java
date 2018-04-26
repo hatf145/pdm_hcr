@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -35,14 +34,14 @@ public class Fragment_Lessors extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        databaseReference = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
-        databaseReference = FirebaseDatabase.getInstance().getReference().child(mAuth.getCurrentUser().getUid()).child("lessors");
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 myDataSet.clear();
-                for(DataSnapshot snapshot : dataSnapshot.getChildren()){
+                for(DataSnapshot snapshot : dataSnapshot.child(mAuth.getCurrentUser().getUid()).child("lessors").getChildren()){
                     Lessor aux = snapshot.getValue(Lessor.class);
                     myDataSet.add(aux);
                     mAdapter.notifyDataSetChanged();
@@ -67,8 +66,6 @@ public class Fragment_Lessors extends android.support.v4.app.Fragment {
 
         return view;
     }
-
-
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
