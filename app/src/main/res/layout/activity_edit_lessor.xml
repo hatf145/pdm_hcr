@@ -10,31 +10,33 @@
         android:orientation="vertical"
         android:gravity="center_horizontal"
         android:padding="@dimen/container_wide_padding"
-        tools:context="iteso.com.rentstudio.ActivityEditProperty">
+        tools:context="iteso.com.rentstudio.ActivityEditLessor">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="vertical">
+
             <LinearLayout
+                android:id="@+id/activity_register_header"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="@dimen/margin">
                 <ImageView
-                    android:id="@+id/activity_registerProperty_icon"
+                    android:id="@+id/activity_register_icon"
                     android:layout_width="@dimen/icon_size"
                     android:layout_height="@dimen/icon_size"
                     android:scaleType="centerInside"
-                    android:src="@drawable/generic_property"
+                    android:src="@drawable/generic_user"
                     android:layout_margin="@dimen/margin"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:text="@string/editProperty"
+                    android:text="@string/editLessor"
                     android:textStyle="bold"
                     android:textColor="@color/trueBlack"
                     android:textSize="@dimen/large_textSize"
@@ -47,11 +49,10 @@
                 android:layout_margin="@dimen/margin">
 
                 <EditText
-                    android:id="@+id/activity_editProperty_name"
+                    android:id="@+id/activity_edit_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/name1"
-                    android:inputType="textPersonName"/>
+                    android:hint="@string/name"/>
 
             </android.support.design.widget.TextInputLayout>
 
@@ -61,11 +62,10 @@
                 android:layout_margin="@dimen/margin">
 
                 <EditText
-                    android:id="@+id/activity_editProperty_direction"
+                    android:id="@+id/activity_edit_lastname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/direction"
-                    android:inputType="text"/>
+                    android:hint="@string/lastname"/>
 
             </android.support.design.widget.TextInputLayout>
 
@@ -75,11 +75,11 @@
                 android:layout_margin="@dimen/margin">
 
                 <EditText
-                    android:id="@+id/activity_editProperty_town"
+                    android:id="@+id/activity_edit_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/town"
-                    android:inputType="text"/>
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"/>
 
             </android.support.design.widget.TextInputLayout>
 
@@ -89,31 +89,18 @@
                 android:layout_margin="@dimen/margin">
 
                 <EditText
-                    android:id="@+id/activity_editProperty_state"
+                    android:id="@+id/activity_edit_cellphone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/state"
-                    android:inputType="text"/>
+                    android:hint="@string/phone"
+                    android:inputType="phone"/>
+
             </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:layout_margin="@dimen/margin">
-
-                <EditText
-                    android:id="@+id/activity_editProperty_rent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/rent"
-                    android:inputType="numberDecimal"/>
-            </android.support.design.widget.TextInputLayout>
-
-        
         </LinearLayout>
 
         <Button
-            android:id="@+id/activity_edit_property"
+            android:id="@+id/save_lessor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/save"
@@ -124,9 +111,7 @@
             android:background="@drawable/button_ripple_effect"
             android:paddingHorizontal="@dimen/node_padding"
             android:layout_margin="@dimen/margin"
-            android:layout_gravity="center_horizontal"
-            android:onClick="onClick"
-/>
+            android:layout_gravity="center_horizontal"/>
 
     </LinearLayout>
 </ScrollView>

@@ -10,7 +10,7 @@
         android:orientation="vertical"
         android:gravity="center_horizontal"
         android:padding="@dimen/container_wide_padding"
-        tools:context="iteso.com.rentstudio.Activity_Register_User">
+        tools:context="iteso.com.rentstudio.Activity_Edit_User">
 
         <LinearLayout
             android:layout_width="match_parent"

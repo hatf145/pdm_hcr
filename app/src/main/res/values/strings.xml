@@ -81,6 +81,7 @@
     <string name="lesse">Arredatario</string>
     <string name="editRent">Editar Renta</string>
     <string name="editProperty">Editar Propiedad</string>
+    <string name="editLessor">Editar Arredador</string>
 
 
 </resources>

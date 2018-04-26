@@ -8,7 +8,7 @@
     android:scrollbarStyle="outsideOverlay">
 
     <LinearLayout
-        android:id="@+id/rent_card_layout"
+        android:id="@+id/lessor_card_layout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/card_height"
         android:orientation="vertical"

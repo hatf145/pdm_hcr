@@ -19,10 +19,12 @@ import iteso.com.rentstudio.beans.Property;
 public class Adapter_Property_Card extends RecyclerView.Adapter<Adapter_Property_Card.ViewHolder>{
     ArrayList<Property> mDataSet;
     private Context context;
+    private int fragment;
 
-    public Adapter_Property_Card(Context context, ArrayList<Property> myDataSet){
+    public Adapter_Property_Card(int fragment,Context context, ArrayList<Property> myDataSet){
         mDataSet = myDataSet;
         this.context = context;
+        this.fragment=fragment;
     }
 
     @Override
@@ -34,13 +36,8 @@ public class Adapter_Property_Card extends RecyclerView.Adapter<Adapter_Property
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        public TextView address;
         public TextView cost;
-        public TextView availability;
         public TextView name;
-        public TextView payday;
-        public TextView state;
-        public TextView town;
 
 
         public LinearLayout mEventLayout;
@@ -70,9 +67,10 @@ public class Adapter_Property_Card extends RecyclerView.Adapter<Adapter_Property
                 iit.setPayday(mDataSet.get(position).getPayday());
                 iit.setState(mDataSet.get(position).getState());
                 iit.setTown(mDataSet.get(position).getTown());
-                Intent intent=new Intent(context,ActivityPropertyScreen.class);
-                intent.putExtra("ITEM",iit);
-                ((Activity_Main_Screen) context).startActivityForResult(intent,9999);
+                Intent intent3=new Intent(context,ActivityPropertyScreen.class);
+                intent3.putExtra("ITEM",iit);
+                intent3.putExtra("FRAGMENT", fragment);
+                ((Activity_Main_Screen) context).startActivityForResult(intent3,9999);
 
             }
         });

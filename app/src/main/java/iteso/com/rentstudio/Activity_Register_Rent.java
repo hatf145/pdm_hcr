@@ -28,7 +28,7 @@ public class Activity_Register_Rent extends AppCompatActivity {
     Spinner lessor, property;
     Calendar calendar;
     TextView date;
-    int year, month, day, i;
+    int year, month, day;
     Button btnRent;
     ArrayList<String> lNames, pNames;
 
@@ -40,8 +40,8 @@ public class Activity_Register_Rent extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity__register_rent);
 
+        databaseReference = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
-        databaseReference = FirebaseDatabase.getInstance().getReference().child(mAuth.getCurrentUser().getUid());
 
         date=findViewById(R.id.activity_rent_date);
         btnRent =findViewById(R.id.activity_brent_register);
@@ -55,12 +55,12 @@ public class Activity_Register_Rent extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 lNames.clear();
                 pNames.clear();
-                for(DataSnapshot snapshot : dataSnapshot.child("lessors").getChildren()){
+                for(DataSnapshot snapshot : dataSnapshot.child(mAuth.getCurrentUser().getUid()).child("lessors").getChildren()){
                     Lessor auxLessor = snapshot.getValue(Lessor.class);
                     lNames.add(auxLessor.getName());
                 }
 
-                for(DataSnapshot snapshot : dataSnapshot.child("properties").getChildren()){
+                for(DataSnapshot snapshot : dataSnapshot.child(mAuth.getCurrentUser().getUid()).child("properties").getChildren()){
                     Property auxProperty = snapshot.getValue(Property.class);
                     pNames.add(auxProperty.getName());
                 }
@@ -80,7 +80,7 @@ public class Activity_Register_Rent extends AppCompatActivity {
             }
         });
 
-        calendar = Calendar.getInstance();
+        calendar=Calendar.getInstance();
         day = calendar.get(Calendar.DAY_OF_MONTH);
         month = calendar.get(Calendar.MONTH);
         year = calendar.get(Calendar.YEAR);
@@ -89,7 +89,7 @@ public class Activity_Register_Rent extends AppCompatActivity {
         date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DatePickerDialog datePickerDialog = new DatePickerDialog(Activity_Register_Rent.this, new DatePickerDialog.OnDateSetListener() {
+                DatePickerDialog datePickerDialog=new DatePickerDialog(Activity_Register_Rent.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker datePicker, int iyear, int iday, int imonth) {
                         date.setText(iday+"/"+imonth+"/"+iyear);
@@ -113,19 +113,18 @@ public class Activity_Register_Rent extends AppCompatActivity {
     }
 
     public void createRent(final String lessor, final String property, final int day){
-        i = 1;
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                for(DataSnapshot snapshot : dataSnapshot.child("properties").getChildren()){
+                for(DataSnapshot snapshot : dataSnapshot.child(mAuth.getCurrentUser().getUid()).child("properties").getChildren()){
                     Property aux = snapshot.getValue(Property.class);
-                    if(aux.getName().equals(property) && i == 1){
+                    if(aux.getName() == property){
                         System.out.println("GOT HERE");
-                        databaseReference.child("properties").child(snapshot.getKey()).child("lessor").setValue(lessor);
-                        databaseReference.child("properties").child(snapshot.getKey()).child("payday").setValue(day);
+                        aux.setLessor(lessor);
+                        aux.setPayday(day);
+                        databaseReference.child(mAuth.getCurrentUser().getUid()).child("properties").child(snapshot.getKey()).setValue(aux);
                     }
                 }
-                i = 0;
             }
 
             @Override
@@ -133,6 +132,8 @@ public class Activity_Register_Rent extends AppCompatActivity {
 
             }
         });
+        databaseReference.child(mAuth.getCurrentUser().getUid()).child("properties").orderByChild("name").equalTo("property");
+
     }
 
     @Override
