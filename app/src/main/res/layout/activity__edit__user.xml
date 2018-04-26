@@ -23,7 +23,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="@dimen/margin">
                 <ImageView
-                    android:id="@+id/activity_registerUser_icon"
+                    android:id="@+id/activity_editUser_icon"
                     android:layout_width="@dimen/icon_size"
                     android:layout_height="@dimen/icon_size"
                     android:scaleType="centerInside"
@@ -124,7 +124,8 @@
             android:background="@drawable/button_ripple_effect"
             android:paddingHorizontal="@dimen/node_padding"
             android:layout_margin="@dimen/margin"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center_horizontal"
+            android:onClick="onClick"/>
 
     </LinearLayout>
 </ScrollView>

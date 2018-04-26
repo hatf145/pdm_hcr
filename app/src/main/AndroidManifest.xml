@@ -32,16 +32,19 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity_Register_Property" />
-        <activity android:name=".Activity_Rent" />
-        <activity android:name=".Activity_Payment_Method">
 
-        </activity>
+        <activity android:name=".Activity_Rent" />
+
+        <activity android:name=".Activity_Register_Rent" />
+        <activity android:name=".Activity_Payment_Method" />
+
         <activity android:name=".Activity_paypal" />
         <activity android:name=".Activity_card_payment" />
         <activity android:name=".Activity_help" />
         <activity android:name=".Activity_Settings" />
         <activity android:name=".Activity_Notifications" />
-        <activity android:name=".Activity_Edit_User" />
+
+
         <activity android:name=".Activity_Eula">
             android:launchMode="singleTask">
             <intent-filter>
@@ -59,6 +62,21 @@
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="${applicationId}.braintree" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Activity_Edit_User">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity_Main_Screen" />
+        </activity>
+        <activity android:name=".ActivityEditRent" />
+        <activity android:name=".ActivityEditProperty" />
+        <activity android:name=".ActivityRentScreen" />
+        <activity android:name=".ActivityPropertyScreen" />
+        <activity android:name=".Activity_Reauthenticate_User">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity_Main_Screen" />
+
         </activity>
     </application>
 

@@ -12,15 +12,15 @@ import java.util.Date;
 public class Rent implements Parcelable {
     private String property;
     private String lessor;
-    private Date cycle;
+    private String date;
 
     public Rent(){
     }
 
-    public Rent(String property, String lessor, Date cycle) {
+    public Rent(String property, String lessor, String date) {
         this.property = property;
         this.lessor = lessor;
-        this.cycle = cycle;
+        this.date = date;
     }
 
     public String getProperty() {
@@ -39,13 +39,14 @@ public class Rent implements Parcelable {
         this.lessor = lessor;
     }
 
-    public Date getCycle() {
-        return cycle;
+    public String getDate() {
+        return date;
     }
 
-    public void setCycle(Date cycle) {
-        this.cycle = cycle;
+    public void setDate(String date) {
+        this.date = date;
     }
+
 
     @Override
     public int describeContents() {
@@ -56,17 +57,16 @@ public class Rent implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.property);
         dest.writeString(this.lessor);
-        dest.writeLong(this.cycle != null ? this.cycle.getTime() : -1);
+        dest.writeString(this.date);
     }
 
     protected Rent(Parcel in) {
         this.property = in.readString();
         this.lessor = in.readString();
-        long tmpCycle = in.readLong();
-        this.cycle = tmpCycle == -1 ? null : new Date(tmpCycle);
+        this.date = in.readString();
     }
 
-    public static final Parcelable.Creator<Rent> CREATOR = new Parcelable.Creator<Rent>() {
+    public static final Creator<Rent> CREATOR = new Creator<Rent>() {
         @Override
         public Rent createFromParcel(Parcel source) {
             return new Rent(source);

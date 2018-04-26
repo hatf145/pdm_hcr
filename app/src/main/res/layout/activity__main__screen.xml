@@ -119,6 +119,15 @@
             android:textColor="@color/trueBlack"
             android:padding="@dimen/node_padding"/>
 
+        <TextView
+            android:id="@+id/drawer_log_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/log_out"
+            android:textSize="@dimen/large_button_textSize"
+            android:textColor="@color/trueBlack"
+            android:padding="@dimen/node_padding"/>
+
     </LinearLayout>
 
 </android.support.v4.widget.DrawerLayout>

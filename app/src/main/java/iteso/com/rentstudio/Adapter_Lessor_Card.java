@@ -56,4 +56,14 @@ public class Adapter_Lessor_Card extends RecyclerView.Adapter<Adapter_Lessor_Car
     public int getItemCount() {
         return mDataSet.size();
     }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        return position;
+    }
 }

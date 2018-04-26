@@ -3,19 +3,40 @@ package iteso.com.rentstudio.beans;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.firebase.database.IgnoreExtraProperties;
+
+@IgnoreExtraProperties
 public class Lessor implements Parcelable {
+    private String email;
+    private String lastname;
     private String name;
     private String phone;
-    private String email;
 
     public Lessor(){
 
     }
 
-    public Lessor(String name, String phone, String email) {
+    public Lessor(String email, String lastname, String name, String phone) {
+        this.email = email;
+        this.lastname = lastname;
         this.name = name;
         this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public String getName() {
@@ -34,13 +55,6 @@ public class Lessor implements Parcelable {
         this.phone = phone;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     @Override
     public int describeContents() {
@@ -49,18 +63,20 @@ public class Lessor implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.email);
+        dest.writeString(this.lastname);
         dest.writeString(this.name);
         dest.writeString(this.phone);
-        dest.writeString(this.email);
     }
 
     protected Lessor(Parcel in) {
+        this.email = in.readString();
+        this.lastname = in.readString();
         this.name = in.readString();
         this.phone = in.readString();
-        this.email = in.readString();
     }
 
-    public static final Parcelable.Creator<Lessor> CREATOR = new Parcelable.Creator<Lessor>() {
+    public static final Creator<Lessor> CREATOR = new Creator<Lessor>() {
         @Override
         public Lessor createFromParcel(Parcel source) {
             return new Lessor(source);
