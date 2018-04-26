@@ -50,7 +50,7 @@ public class Fragment_Main extends android.support.v4.app.Fragment {
                 myDataSet.clear();
                 for(DataSnapshot snapshot : dataSnapshot.child(mAuth.getCurrentUser().getUid()).child("properties").getChildren()){
                     Property aux = snapshot.getValue(Property.class);
-                    if(aux.getLessor() != "lessor_1") {
+                    if(!aux.getLessor().equals("lessor_1")) {
                         Rent auxRent = new Rent(aux.getName(), aux.getLessor(), myDate(aux.getPayday()));
                         myDataSet.add(auxRent);
                         mAdapter.notifyDataSetChanged();

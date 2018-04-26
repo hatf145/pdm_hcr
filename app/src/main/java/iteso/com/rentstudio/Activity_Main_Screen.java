@@ -60,13 +60,14 @@ public class Activity_Main_Screen extends AppCompatActivity {
                 mAuth.signOut();
                 Intent intent = new Intent(Activity_Main_Screen.this, Activity_LogIn.class);
                 startActivity(intent);
+                finish();
             }
         });
 
         mEditProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Activity_Edit_User.class);
+                Intent intent = new Intent(Activity_Main_Screen.this, Activity_Reauthenticate_User.class);
                 startActivity(intent);
             }
         });

@@ -47,7 +47,7 @@ public class Adapter_Property_Card extends RecyclerView.Adapter<Adapter_Property
 
         public ViewHolder(View v){
             super(v);
-            mEventLayout = (LinearLayout) v.findViewById(R.id.property_card_layout);//////////////////////////
+            mEventLayout = (LinearLayout) v.findViewById(R.id.property_card_layout);
             name = v.findViewById(R.id.property_card_house_text);
            cost = v.findViewById(R.id.property_card_rent_text);
 

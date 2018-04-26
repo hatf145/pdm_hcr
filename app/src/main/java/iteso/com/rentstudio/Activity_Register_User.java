@@ -91,9 +91,9 @@ public class Activity_Register_User extends AppCompatActivity implements View.On
                 User aux = new User(sEmail, sLastname, sName, sPassword, sPhone, (type ? 1 : 0));
                 databaseReference.child(mAuth.getCurrentUser().getUid()).child("info").setValue(aux);
             }
-
             Intent loginIntent = new Intent(Activity_Register_User.this,
                     Activity_Main_Screen.class);
+            loginIntent.setFlags(loginIntent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(loginIntent);
         } else {
 
@@ -118,6 +118,30 @@ public class Activity_Register_User extends AppCompatActivity implements View.On
             valid = false;
         } else {
             etPassword.setError(null);
+        }
+
+        String name = etName.getText().toString();
+        if (TextUtils.isEmpty(name)) {
+            etName.setError("Required.");
+            valid = false;
+        } else {
+            etName.setError(null);
+        }
+
+        String lastname = etLastname.getText().toString();
+        if (TextUtils.isEmpty(lastname)) {
+            etLastname.setError("Required.");
+            valid = false;
+        } else {
+            etLastname.setError(null);
+        }
+
+        String cellphone = etPhone.getText().toString();
+        if (TextUtils.isEmpty(cellphone)) {
+            etPhone.setError("Required.");
+            valid = false;
+        } else {
+            etPhone.setError(null);
         }
 
         return valid;

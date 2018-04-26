@@ -39,12 +39,21 @@
         <activity android:name=".Activity_help" />
         <activity android:name=".Activity_Settings" />
         <activity android:name=".Activity_Notifications" />
-        <activity android:name=".Activity_Edit_User" />
+        <activity android:name=".Activity_Edit_User">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity_Main_Screen" />
+        </activity>
         <activity android:name=".Activity_Eula" />
         <activity android:name=".ActivityEditRent" />
         <activity android:name=".ActivityEditProperty" />
         <activity android:name=".ActivityRentScreen" />
-        <activity android:name=".ActivityPropertyScreen"></activity>
+        <activity android:name=".ActivityPropertyScreen" />
+        <activity android:name=".Activity_Reauthenticate_User">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity_Main_Screen" />
+        </activity>
     </application>
 
 </manifest>

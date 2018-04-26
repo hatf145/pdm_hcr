@@ -67,6 +67,10 @@ public class Activity_LogIn extends AppCompatActivity implements View.OnClickLis
                             updateUI(user);
                         } else {
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
+                            etUserName.setText("");
+                            etUserName.setError("Wrong!");
+                            etPassword.setText("");
+                            etPassword.setError("Wrong!");
                             updateUI(null);
                         }
                     }
@@ -109,7 +113,6 @@ public class Activity_LogIn extends AppCompatActivity implements View.OnClickLis
             Intent loginIntent = new Intent(Activity_LogIn.this,
                     Activity_Main_Screen.class);
             loginIntent.setFlags(loginIntent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
-
             startActivity(loginIntent);
         } else {
 
