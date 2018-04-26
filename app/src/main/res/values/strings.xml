@@ -35,7 +35,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="settings_notification">Notificaciones</string>
-    <string name="settings_payment">Métodos de pago</string>
+    <string name="settings_payment">Pagos</string>
     <string name="settings_help">Ayuda</string>
     <string name="settings_eula">Términos de uso</string>
     <string name="settings_logout">Cerrar sesión</string>

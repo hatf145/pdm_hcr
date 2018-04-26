@@ -33,7 +33,7 @@
         </activity>
         <activity android:name=".Activity_Register_Property" />
 
-        <activity android:name=".Activity_Rent" />
+
 
         <activity android:name=".Activity_Register_Rent" />
         <activity android:name=".Activity_Payment_Method" />
