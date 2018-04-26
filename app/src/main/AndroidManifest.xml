@@ -33,14 +33,33 @@
         </activity>
         <activity android:name=".Activity_Register_Property" />
         <activity android:name=".Activity_Rent" />
-        <activity android:name=".Activity_Payment_Method" />
+        <activity android:name=".Activity_Payment_Method">
+
+        </activity>
         <activity android:name=".Activity_paypal" />
         <activity android:name=".Activity_card_payment" />
         <activity android:name=".Activity_help" />
         <activity android:name=".Activity_Settings" />
         <activity android:name=".Activity_Notifications" />
         <activity android:name=".Activity_Edit_User" />
-        <activity android:name=".Activity_Eula"></activity>
+        <activity android:name=".Activity_Eula">
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="${applicationId}.braintree" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.braintreepayments.api.BraintreeBrowserSwitchActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="${applicationId}.braintree" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
