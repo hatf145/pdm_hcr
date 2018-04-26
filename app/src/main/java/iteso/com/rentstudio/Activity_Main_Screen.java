@@ -156,9 +156,36 @@ public class Activity_Main_Screen extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(requestCode == 9999){
             if(resultCode == Activity.RESULT_OK){
-                fragment_properties.onActivityResult(requestCode, resultCode, data);
+                int fragment=data.getExtras().getInt("FRAGMENT");
+                switch (fragment){
+                    case 0:
+                        fragment_properties.onActivityResult(requestCode, resultCode, data);
+                        break;
+                    case 1:
+                        fragment_main.onActivityResult(requestCode, resultCode, data);
+                        break;
+                    case 2:
+                        fragment_lessors.onActivityResult(requestCode, resultCode, data);
+                        break;
+
+
+
+                }
             }
         }
+
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 

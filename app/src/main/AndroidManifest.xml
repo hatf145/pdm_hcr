@@ -3,6 +3,7 @@
     package="iteso.com.rentstudio">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -44,7 +45,9 @@
         <activity android:name=".ActivityEditRent" />
         <activity android:name=".ActivityEditProperty" />
         <activity android:name=".ActivityRentScreen" />
-        <activity android:name=".ActivityPropertyScreen"></activity>
+        <activity android:name=".ActivityPropertyScreen" />
+        <activity android:name=".ActivityLessorScreen" />
+        <activity android:name=".ActivityEditLessor"></activity>
     </application>
 
 </manifest>

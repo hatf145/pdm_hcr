@@ -61,7 +61,7 @@ public class Fragment_Properties extends android.support.v4.app.Fragment {
         mLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(mLayoutManager);
 
-        mAdapter = new Adapter_Property_Card(getActivity(), myDataSet);
+        mAdapter = new Adapter_Property_Card(0,getActivity(), myDataSet);
         recyclerView.setAdapter(mAdapter);
 
         return view;

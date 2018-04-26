@@ -61,7 +61,7 @@ public class Fragment_Lessors extends android.support.v4.app.Fragment {
         mLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(mLayoutManager);
 
-        mAdapter = new Adapter_Lessor_Card(getActivity(), myDataSet);
+        mAdapter = new Adapter_Lessor_Card(2,getActivity(), myDataSet);
         recyclerView.setAdapter(mAdapter);
 
         return view;

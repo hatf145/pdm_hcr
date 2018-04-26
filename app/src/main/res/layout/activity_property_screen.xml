@@ -16,19 +16,20 @@ android:id="@+id/property_screen"
         android:orientation="vertical"
 
         android:gravity="center_horizontal"
-        tools:context="iteso.com.rentstudio.Activity_Register_Property">
-        <ImageView
-            android:id="@+id/property_card_house_image"
-            android:scaleType="centerInside"
-            android:layout_width="@dimen/icon_height"
-            android:layout_height="@dimen/icon_height"
-            android:src="@drawable/generic_house"
-            android:layout_margin="@dimen/margin"/>
+        tools:context="iteso.com.rentstudio.ActivityPropertyScreen">
+
         <LinearLayout
             android:layout_margin="@dimen/margin_top"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/property_card_house_image"
+                android:scaleType="centerInside"
+                android:layout_width="@dimen/icon_height"
+                android:layout_height="@dimen/icon_height"
+                android:src="@drawable/generic_house"
+                android:layout_margin="@dimen/margin"/>
             <TextView
                 android:id="@+id/property_house"
                 android:layout_width="wrap_content"
@@ -58,17 +59,7 @@ android:id="@+id/property_screen"
                 android:layout_margin="@dimen/margin"
                 android:layout_gravity="center_vertical"
                 />
-            <TextView
 
-                android:id="@+id/property_payday"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Payday"
-                android:textSize="@dimen/card_view_text_size"
-                android:textColor="@color/trueBlack"
-                android:layout_margin="@dimen/margin"
-                android:layout_gravity="center_vertical"
-                />
             <TextView
 
                 android:id="@+id/property_address"
@@ -112,8 +103,31 @@ android:id="@+id/property_screen"
                 android:layout_margin="@dimen/margin"
                 android:layout_gravity="center_vertical"
                 />
+            <TextView
 
+                android:id="@+id/property_payday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/card_view_text_size"
+                android:textColor="@color/trueBlack"
+                android:layout_margin="@dimen/margin"
+                android:layout_gravity="center_vertical"
+                />
         </LinearLayout>
+        <Button
+            android:id="@+id/activity_property_screen_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/editProperty"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="@color/notReallyWhite"
+            android:textSize="@dimen/regular_button_textSize"
+            android:background="@drawable/button_ripple_effect"
+            android:paddingHorizontal="@dimen/node_padding"
+            android:layout_margin="@dimen/margin"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onClick"/>
 
 
     </LinearLayout>
