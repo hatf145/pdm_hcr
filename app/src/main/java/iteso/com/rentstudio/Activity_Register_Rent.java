@@ -122,7 +122,7 @@ public class Activity_Register_Rent extends AppCompatActivity {
                     if(aux.getName().equals(property) && i == 1){
                         System.out.println("GOT HERE");
                         databaseReference.child("properties").child(snapshot.getKey()).child("lessor").setValue(lessor);
-                        databaseReference.child("properties").child(snapshot.getKey()).child("payday").setValue(day);
+                        databaseReference.child("properties").child(snapshot.getKey()).child("payday").setValue(Integer.valueOf(day));
                     }
                 }
                 i = 0;
